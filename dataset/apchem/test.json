@@ -1,0 +1,98 @@
+[
+  {
+    "instruction": "A substance was studied in the laboratory. It melts at 1873 K, does not conduct electricity as a solid, and also does not conduct electricity as a liquid. Based on the data, which of the following shows the type of bonding in the substance?\nAnswer format: A/B/C/D",
+    "input": "(A) Network covalent\n(B) Ionic\n(C) Metallic\n(D) Molecular",
+    "output": "Because the melting point is extremely high and does not conduct electricity as a solid nor a liquid, it is a covalent network substance. Covalent network substances have strong bonds which are hard to break, and due to their molecular nature never conduct electricity. Therefore, the correct answer is A.",
+    "answer": "A"
+  },
+  {
+    "instruction": "A substance was studied in the laboratory. It melts at 1691 K, does not conduct electricity as a solid, but conduct electricity well as a liquid. Based on the data, which of the following shows the type of bonding in the substance?\nAnswer format: A/B/C/D",
+    "input": "(A) Network covalent\n(B) Ionic\n(C) Metallic\n(D) Molecular",
+    "output": "Because the melting point is extremely high and does not conduct electricity as a solid but does as a liquid, it is an ionic substance. Ionic substances have strong intermolecular bonds, which require high temperature to break, and they conduct electricity in the liquid phase when their ions are free to move. Therefore, the correct answer is B.",
+    "answer": "B"
+  },
+  {
+    "instruction": "A substance was studied in the laboratory. It melts at 923 K, does not conduct electricity as a solid, but conduct electricity well as a liquid. Based on the data, which of the following shows the type of bonding in the substance?\nAnswer format: A/B/C/D",
+    "input": "(A) Network covalent\n(B) Ionic\n(C) Metallic\n(D) Molecular",
+    "output": "Because the melting point is not very high, and conducts electricity both as a solid and as a liquid, it is a metallic substance. Metallic substances have free electrons that make them conduct electricity in both the solid and liquid phases. The bond strength is also moderate, which is why the melting point is not extremely high. Therefore, the correct answer is C.",
+    "answer": "C"
+  },
+  {
+    "instruction": "Does butanal, pentane, or propanoic acid have the highest boiling point, and why?\nAnswer format: A/B/C/D",
+    "input": "(A) Butanal, because it can form intermolecular hydrogen bonds\n(B) Pentane, because it has the longest carbon chain\n(C) Pentane, because it has the most C−H bonds\n(D) Propanoic acid, because it can form intermolecular hydrogen bonds",
+    "output": "If a molecule has hydrogen bonds, it has the largest boiling points since the intermolecular attractions of hydrogen bonds are extremely high. Propanoic has hydrogen bonds due to its COOH group, and neither pentane nor butanal have it. Therefore, the correct answer is D.",
+    "answer": "D"
+  },
+  {
+    "instruction": "Complete the statement.\nA 1.0 L sample of a pure gas is found to have a lower pressure than that predicted by the ideal gas law. The best explanation for the observation is that the molecules of the gas\nAnswer format: A/B/C/D",
+    "input": "(A) have a combined volume that is too large to be considered negligible when compared to the volume of the container\n(B) have a low molecular mass and therefore do not strike the container walls with as much force as expected\n(C) are attracted to each other and do not exert as much force on the container walls as they would if they had no mutual attractions\n(D) are attracted to the sides of the container and strike the container walls with more force than expected",
+    "output": "If the pressure is less than expected, then the particles would be striking the container walls with less force than expected. This happens due to intermolecular attractions among the gas molecules. Therefore, the correct answer is C.",
+    "answer": "C"
+  },
+  {
+    "instruction": "Equal volumes of solutions are in two different vessels. Vessel 1 has 4 positive ions and 4 negative ions. Vessel 2 has 8 positive ions and 16 negative ions. If the solution represented in vessel 1 is KCl(aq), then the solution represented in vessel 2 could be an aqueous solution of which of the following?\nAnswer format: A/B/C/D",
+    "input": "(A) KCl with the same molarity as the solution in vessel 1\n(B) KCl with twice the molarity of the solution in vessel 1\n(C) CaCl2 with the same molarity as the solution in vessel 1\n(D) CaCl2 with twice the molarity of the solution in vessel 1",
+    "output": "The solution in the second vessel can't be KCl because it has twice as many negative ions as positive ions. This fits the description of CaCl2, because CaCl2 has 2 negative ions for every 1 positive ion. Additionally, the molarity has to be twice that of vessel 1. In vessel 1, there could be 4 KCl molecules to make 4 positive and 4 negative ions, whereas in vessel 2, there needs to be 8 CaCl2 molecules to make 8 positive and 16 negative ions. Therefore, the correct answer is D.",
+    "answer": "D"
+  },
+  {
+    "instruction": "The first ionization energy of an unknown element, X, is 730 kJ/mol. The second ionization energy of X is 1450 kJ/mol. The third ionization energy of X is 7700 kJ/mol. The fourth ionization energy of X is 10,500 kJ/mol. Which of the following is the most likely empirical formula of a compound formed from element X and phosphorus, P?\nAnswer format: A/B/C/D",
+    "input": "(A) XP\n(B) X3P\n(C) X3P2\n(D) X3P4",
+    "output": "We know that X likely has 2 valence electrons, because there is an extreme jump between the second and third ionization energies, signifying a change in energy level. This means that X would have a +2 charge, and combining it with phosphorus with its -3 charge, we would have an empirical formula of X3P2. Therefore, the correct answer is C.",
+    "answer": "C"
+  },
+  {
+    "instruction": "Which of the following correctly compares periodic properties of two elements and provides an accurate explanation for that difference?\nAnswer format: A/B/C/D",
+    "input": "(A) The first ionization energy of Al is greater than that of B because Al has a larger nuclear charge than B does.\n(B) The first ionization energy of F is greater than that of O because O has a higher electronegativity than F has.\n(C) The atomic radius of Ca is larger than that of Mg because the valence electrons in Mg experience more shielding than the valence electrons in Ca do.\n(D) The atomic radius of Cl is smaller than that of S because Cl has a larger nuclear charge than S does.",
+    "output": "A is incorrect because the ionization energy of Al is actually less than that of B, since Al is much larger and as such doesn't have as tight a hold on its electrons. B is incorrect because ionization energy is not caused by electronegativity. C is incorrect because the atomic radius of Ca is larger due to the fact that there are more electrons which take up more space in higher energy levels, not because of shielding. D is correct as Cl is smaller than S due to its higher nuclear charge which pulls the electrons in tighter. The correct answer is D.",
+    "answer": "D"
+  },
+  {
+    "instruction": "HNO2(aq) <-> H+(aq) + NO2-(aq)\nKa = 4.0 * 10^-4\nOn the basis of the information above, what is the approximate percent ionization of HNO2 in a 1.0 M HNO2(aq) solution?\nAnswer format: A/B/C/D",
+    "input": "(A) 0.00040%\n(B) 0.020%\n(C) 0.040%\n(D) 2.0%",
+    "output": "If x is the H+ ion concentration, Ka = x^2 / (1 - x). Since x is very small compared to 1, we can approximate x^2 / 1 = 4.0 * 10^-4. Therefore, x = 0.02. The percent ionization is x / 1.0 M = 0.02, or 2%. Therefore, the correct answer is D.",
+    "answer": "D"
+  },
+  {
+    "instruction": "2 NOBr(g) -> 2 NO(g) + Br2(g)\nThe equation above represents an elementary step in a chemical reaction. Which of the following is the correct expression for the rate law of the elementary step?\nAnswer format: A/B/C/D",
+    "input": "(A) Rate = k[NOBr]^1/2 \n(B) Rate = k[NOBr]\n(C) Rate = k[NOBr]^2\n(D) Rate = k[NO]^2[Br2]",
+    "output": "For an elementary step, the rate law is the product of the concentrations of the reactants raised to the power of their coefficients. Therefore, the rate law for this reaction is Rate = k[NOBr]^2. Therefore, the correct answer is C.",
+    "answer": "C"
+  },
+  {
+    "instruction": "A balloon filled with 0.25 mol of He(g) at 273 K and 1 atm is allowed to rise through the atmosphere. Which of the following explains what happens to the volume of the balloon as it rises from ground level to an altitude where the air temperature is 220 K and the air pressure is 0.1 atm?\nAnswer format: A/B/C/D",
+    "input": "(A) The volume will increase because the decrease in air pressure will have a greater effect than the decrease in temperature.\n(B) The volume will remain unchanged because of the counteracting effects of the decrease in temperature and the decrease in air pressure.\n(C) The volume will decrease because the decrease in temperature will have a greater effect than the decrease in air pressure.\n(D) It cannot be determined whether the volume of the balloon will increase, decrease, or remain the same without knowing the initial volume of the balloon.",
+    "output": "When the temperature decreases slightly from 273 K to 220 K, the volume must also decrease slightly to keep everything else constant. When the pressure decreases significantly from 1 atm to 0.1 atm, the volume must increase significantly to keep everything else constant. The increase outweighs the decrease since the pressure changed much more significantly, so the correct answer is A.",
+    "answer": "A"
+  },
+  {
+    "instruction": "CH3OH(l) boils at 338 K, and C2H5OH(l) boils at 351 K. Equimolar samples of CH3OH(l) and C2H5OH(l) are placed in separate, previously evacuated, rigid 2.0 L vessels. Each vessel is attached to a pressure gauge, and the temperatures are kept at 300 K. In both vessels, liquid is observed to remain present at the bottom of the container at all times. The the pressure in the vessel containing CH3OH(l) starts at 0 and rapidly increases before levelling off at 0.196 atm.\nWhich of the following best describes the change that takes place immediately after the CH3OH(l) is introduced into the previously evacuated vessel?\nAnswer format: A/B/C/D",
+    "input": "(A) A chemical change takes place because covalent bonds are broken.\n(B) A chemical change takes place because intermolecular attractions are overcome.\n(C) A physical change takes place because covalent bonds are broken.\n(D) A physical change takes place because intermolecular attractions are overcome.",
+    "output": "Although the CH3OH is not boiling at 300 K, some of it is still evaporating and creating its vapor pressure. This is why the pressure in the vessel increases before levelling off. This is a physical change because the CH3OH is evaporating, which is the CH3OH overcoming its intermolecular attractions. Therefore, the correct answer is D.",
+    "answer": "D"
+  },
+  {
+    "instruction": "CH3OH(l) boils at 338 K, and C2H5OH(l) boils at 351 K. Equimolar samples of CH3OH(l) and C2H5OH(l) are placed in separate, previously evacuated, rigid 2.0 L vessels. Each vessel is attached to a pressure gauge, and the temperatures are kept at 300 K. In both vessels, liquid is observed to remain present at the bottom of the container at all times. The the pressure in the vessel containing CH3OH(l) starts at 0 and rapidly increases before levelling off at 0.196 atm.\nThe value of Kp for the evaporation of CH3OH(l) at 300 K is closest to which of the following?\nAnswer format: A/B/C/D",
+    "input": "(A) 0.04\n(B) 0.2\n(C) 5\n(D) 30",
+    "output": "The equation for the evaporation of CH3OH(l) is CH3OH(l) -> CH3OH(g), with Kp = P(CH3OH(g)). Since the pressure of CH3OH(g) is 0.196 atm after a long time has passed, that is its pressure at equilibrium, and Kp = 0.196, or approximately 0.2. Therefore, the correct answer is B.",
+    "answer": "B"
+  },
+  {
+    "instruction": "CH3OH(l) boils at 338 K, and C2H5OH(l) boils at 351 K. Equimolar samples of CH3OH(l) and C2H5OH(l) are placed in separate, previously evacuated, rigid 2.0 L vessels. Each vessel is attached to a pressure gauge, and the temperatures are kept at 300 K. In both vessels, liquid is observed to remain present at the bottom of the container at all times. The the pressure in the vessel containing CH3OH(l) starts at 0 and rapidly increases before levelling off at 0.196 atm.\nThe temperature of the CH3OH is increased from\n300 K to 400 K to vaporize all the liquid, which\nincreases the pressure in the vessel to 0.30 atm.\nThe experiment is repeated under identical conditions but this time using half the mass of CH3OH that was used originally. What will be the pressure in the vessel at 400 K?\nAnswer format: A/B/C/D",
+    "input": "(A) 0.15 atm\n(B) 0.30 atm\n(C) 0.40 atm\n(D) 0.60 atm",
+    "output": "If there is half as much CH3OH in the new vessel, at the same temperature and volume, the pressure will be half as much, since pressure and number of particles are directly proportional. Therefore, the pressure will be 0.30 atm / 2 = 0.15 atm. Therefore, the correct answer is A.",
+    "answer": "A"
+  },
+  {
+    "instruction": "CH3OH(l) boils at 338 K, and C2H5OH(l), a bigger molecule, boils at 351 K.\nComplete the statement.\nCompared to the equilibrium vapor pressure of CH3OH(l) at 300 K, the equilibrium vapor pressure of C2H5OH(l) at 300 K is\nAnswer format: A/B/C/D",
+    "input": "(A) the same, because both compounds have hydrogen bonding among their molecules\n(B) higher, because London dispersion forces among C2H5OH molecules are greater than those among CH3OH molecules\n(C) lower, because London dispersion forces among C2H5OH molecules are greater than those among CH3OH molecules\n(D) lower, because of the larger number of hydrogen bonds among C2H5OH molecules",
+    "output": "C2H5OH has stronger dispersion forces since it is larger, and having stronger intermolecular attractions makes the vapor pressure lower as less molecules can break their attraction and become gases. Therefore, the correct answer is C.",
+    "answer": "C"
+  },
+  {
+    "instruction": "Step 1: H2SeO3(aq) <-> HSeO3−(aq) + H+(aq)    Ka1 = 2.1 * 10^−3\nStep 2: HSeO3−(aq) <-> SeO32−(aq) + H+(aq)    Ka2 = 5.3 * 10^−9\nThe step-wise dissociation of selenous acid, H2SeO3(aq), is represented by the equations above. Which of the following best helps explain why the value of Ka2 is so much smaller than the value of Ka1?\nAnswer format: A/B/C/D",
+    "input": "(A) The Se atom in H2SeO3(aq) is in a higher oxidation state than the Se atom in HSeO3−(aq).\n(B) Water is more attracted to HSeO3−(aq) ions than to SeO32− ions, which drives the step 2 equilibrium toward the reactant.\n(C) The HSeO3−(aq) ions produced in step 1 are asymmetrical, but the SeO32− ions produced in step 2 are symmetrical.\n(D) Removing the first H+ from H2SeO3(aq) requires less energy than removing the second H+, because the second H+ is removed from a negatively charged species.",
+    "output": "Removing the second H+ is harder because the HSeO3- is now negatively charged, making it hold on to the H+ even harder. This is why the second Ka is so much smaller than the first. Therefore, the correct answer is D.",
+    "answer": "D"
+  }
+]

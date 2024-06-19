@@ -100,7 +100,7 @@ def main(
         outputs = evaluate(instruction)
         label = data.get('answer')
         flag = False
-        if args.dataset.lower() in ['aqua']:
+        if args.dataset.lower() in ['aqua', 'apchem']:  # apchem
             predict = extract_answer_letter(args, outputs)
             if label == predict:
                 correct += 1
