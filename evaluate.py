@@ -139,25 +139,35 @@ def create_dir(dir_path):
 
 
 def generate_prompt(instruction, input=None):
-    if input:
-        return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+    return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
 
-                ### Instruction:
-                {instruction}
+               ### Instruction:
+               {instruction}
 
-                ### Input:
-                {input}
+               ### Input:
+               {input}
 
-                ### Response:
-                """  # noqa: E501
-    else:
-        return f"""Below is an instruction that describes a task. Write a response that appropriately completes the request. 
-
-                ### Instruction:
-                {instruction}
-
-                ### Response:
-                """  # noqa: E501
+               ### Response:
+               """  # noqa: E501
+    # if input:
+    #     return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+    #
+    #             ### Instruction:
+    #             {instruction}
+    #
+    #             ### Input:
+    #             {input}
+    #
+    #             ### Response:
+    #             """  # noqa: E501
+    # else:
+    #     return f"""Below is an instruction that describes a task. Write a response that appropriately completes the request.
+    #
+    #             ### Instruction:
+    #             {instruction}
+    #
+    #             ### Response:
+    #             """  # noqa: E501
 
 
 def load_data(args) -> list:
