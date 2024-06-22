@@ -323,25 +323,35 @@ def train(
 
 def generate_prompt(data_point):
     # sorry about the formatting disaster gotta move fast
-    if data_point["input"]:
-        return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request. 
+    return f"""Below is an instruction that describes a question, paired with the answer choices that you can select. Write a response that appropriately completes the question. Your response should end with the letter A, B, C, or D, indicating your final answer choice.
 
-                ### Instruction:
-                {data_point["instruction"]}
-                
-                ### Input:
-                {data_point["input"]}
-                
-                ### Response:
-                {data_point["output"]}""" # noqa: E501
-    else:
-        return f"""Below is an instruction that describes a task. Write a response that appropriately completes the request.  
+                   ### Instruction:
+                   {data_point["instruction"]}
 
-                ### Instruction:
-                {data_point["instruction"]}
-                
-                ### Response:
-                {data_point["output"]}""" # noqa: E501
+                   ### Answer Choices:
+                   {data_point["input"]}
+
+                   ### Response:
+                   {data_point["output"]}"""  # noqa: E501
+    # if data_point["input"]:
+    #     return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+    #
+    #             ### Instruction:
+    #             {data_point["instruction"]}
+    #
+    #             ### Input:
+    #             {data_point["input"]}
+    #
+    #             ### Response:
+    #             {data_point["output"]}""" # noqa: E501
+    # else:
+    #     return f"""Below is an instruction that describes a task. Write a response that appropriately completes the request.
+    #
+    #             ### Instruction:
+    #             {data_point["instruction"]}
+    #
+    #             ### Response:
+    #             {data_point["output"]}""" # noqa: E501
 
 
 if __name__ == "__main__":
