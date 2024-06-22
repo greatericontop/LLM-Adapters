@@ -41,7 +41,8 @@ def main(
             top_p=0.75,
             top_k=40,
             num_beams=4,
-            max_new_tokens=256,
+            max_new_tokens=80,
+            #max_new_tokens=256,
             **kwargs,
     ):
         prompt = generate_prompt(instruction, input)
@@ -139,12 +140,12 @@ def create_dir(dir_path):
 
 
 def generate_prompt(instruction, input=None):
-    return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+    return f"""Below is an instruction that describes a question, paired with the answer choices that you can select. Write a response that appropriately completes the question. Your response should end with the letter A, B, C, or D, indicating your final answer choice.
 
                ### Instruction:
                {instruction}
 
-               ### Input:
+               ### Answer Choices:
                {input}
 
                ### Response:
@@ -303,6 +304,7 @@ def extract_answer_letter(args, sentence: str) -> str:
     if pred_answers:
         if not pred_answers:
             return ''
+        print(f'  Debug:  grading:  given answers={pred_answers} ; using: {pred_answers[0]}')
         return pred_answers[0]
     else:
         return ''
