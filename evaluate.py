@@ -300,12 +300,13 @@ def extract_answer_number(args, sentence: str) -> float:
 
 def extract_answer_letter(args, sentence: str) -> str:
     sentence_ = sentence.strip()
-    pred_answers = re.findall(r'A|B|C|D|E', sentence_)
+    # Yes-overlapping matches for [startline/whitespace/punctuation][letter][endline/whitespace/punctuation]
+    pred_answers = re.findall(r'(?=(^|\.|,|;| )([ABCDE])($|\.|,|;| ))', sentence_)
+    #pred_answers = re.findall(r'A|B|C|D|E', sentence_)
     if pred_answers:
-        if not pred_answers:
-            return ''
-        print(f'  Debug:  grading:  given answers={pred_answers} ; using: {pred_answers[0]}')
-        return pred_answers[0]
+        print(f'  Debug:  grading:  using: {pred_answers[-1]}')
+        # pred_answers[-1] e.g. = (' ', 'A', '.')
+        return pred_answers[-1][1]
     else:
         return ''
 
