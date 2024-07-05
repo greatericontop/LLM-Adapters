@@ -140,16 +140,23 @@ def create_dir(dir_path):
 
 
 def generate_prompt(instruction, input=None):
-    return f"""Below is an instruction that describes a question, paired with the answer choices that you can select. Write a response that appropriately completes the question. Your response must end with "Therefore, the correct answer is LETTER", with the letter A, B, C, or D, indicating your final answer choice.
+    return f"""Below is an instruction that describes a question. Write a response that appropriately completes the question. Your response must end with your final answer.
 
-               ### Instruction:
+               ### Question:
                {instruction}
-
-               ### Answer Choices:
-               {input}
 
                ### Response:
                """  # noqa: E501
+    # return f"""Below is an instruction that describes a question, paired with the answer choices that you can select. Write a response that appropriately completes the question. Your response must end with "Therefore, the correct answer is LETTER", with the letter A, B, C, or D, indicating your final answer choice.
+    #
+    #            ### Instruction:
+    #            {instruction}
+    #
+    #            ### Answer Choices:
+    #            {input}
+    #
+    #            ### Response:
+    #            """  # noqa: E501
     # if input:
     #     return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
     #

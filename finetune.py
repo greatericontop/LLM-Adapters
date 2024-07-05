@@ -323,16 +323,13 @@ def train(
 
 def generate_prompt(data_point):
     # sorry about the formatting disaster gotta move fast
-    return f"""Below is an instruction that describes a question, paired with the answer choices that you can select. Write a response that appropriately completes the question. Your response must end with "Therefore, the correct answer is LETTER", with the letter A, B, C, or D, indicating your final answer choice.
+    return f"""Below is an instruction that describes a question. Write a response that appropriately completes the question. Your response must end with your final answer.
 
-                   ### Instruction:
-                   {data_point["instruction"]}
+               ### Question:
+               {data_point["instruction"]}
 
-                   ### Answer Choices:
-                   {data_point["input"]}
-
-                   ### Response:
-                   {data_point["output"]}"""  # noqa: E501
+               ### Response:
+               {data_point["output"]}"""  # noqa: E501
     # if data_point["input"]:
     #     return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
     #
