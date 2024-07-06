@@ -41,7 +41,7 @@ def main(
             top_p=0.75,
             top_k=40,
             num_beams=4,
-            max_new_tokens=110,
+            max_new_tokens=125,
             #max_new_tokens=256,
             **kwargs,
     ):
