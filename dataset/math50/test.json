@@ -1,0 +1,302 @@
+[
+    {
+        "instruction": "At the arcade Dave won 11 tickets . If he spent 5 tickets on a beanie and later won 10 more tickets , how many would he have ?\n ",
+        "input": "",
+        "output": "Dave initially had 11 tickets. He spent 5 tickets on a beanie, leaving him with:\n\n11 - 5 = 6 tickets\n\nHe later won 10 more tickets, so his total number of tickets would be:\n\n6 + 10 = 16 tickets\n\nTherefore, Dave would have 16 tickets after spending 5 tickets on a beanie and winning 10 more tickets. The answer in Arabic numerals is:\n\n16",
+        "answer": "16.0"
+    },
+    {
+        "instruction": "Anthony has 16 pets. This morning he forgot to lock the door and he lost 6 pets. After that 1/5 of his pets died from old age. How many pets does he have left?\n ",
+        "input": "",
+        "output": "Step 1: Subtract the number of lost pets from the total number of pets to find how many pets Anthony has left: \n16 - 6 = 10\n\nStep 2: Find how many pets died from old age by multiplying the number of remaining pets by 1/5: \n10 x 1/5 = 2\n\nStep 3: Subtract the number of pets that died from old age from the number of remaining pets: \n10 - 2 = 8\n\nTherefore, Anthony has 8 pets left. The answer in Arabic numerals is 8.",
+        "answer": "8.0"
+    },
+    {
+        "instruction": "If you take the fastest speed of a rabbit and double it, add 4 to that then double it again you get 188.  How fast is the rabbit?\n ",
+        "input": "",
+        "output": "Let's call the speed of the rabbit \"x\".\n\nThe problem tells us to take the fastest speed of a rabbit and double it, so we have:\n\n2x\n\nThen we add 4 to that:\n\n2x + 4\n\nAnd finally, we double it again to get 188:\n\n2(2x + 4) = 188\n\nSimplifying the equation, we can distribute the 2:\n\n4x + 8 = 188\n\nSubtracting 8 from both sides:\n\n4x = 180\n\nDividing both sides by 4:\n\nx = 45\n\nTherefore, the speed of the rabbit is 45.",
+        "answer": "45.0"
+    },
+    {
+        "instruction": "Janet counts 30 crows on the powerlines and 60% more hawks than crows. How many birds does she count total?\n ",
+        "input": "",
+        "output": "Step 1: Find 60% of 30 crows.\n60% of 30 = 0.60 x 30 = 18\n\nStep 2: Add the number of hawks to the number of crows.\nNumber of hawks = 30 crows + 18 additional hawks\nNumber of hawks = 48\n\nStep 3: Add the number of crows and hawks together.\nTotal number of birds = 30 crows + 48 hawks\nTotal number of birds = 78\n\nTherefore, Janet counts a total of 78 birds.",
+        "answer": "78.0"
+    },
+    {
+        "instruction": "Shara collects shells. She had 20 shells before she went on vacation. On vacation, she found 5 shells per day for 3 days. Then he found 6 shells on the fourth day. How many shells does she have now?\n ",
+        "input": "",
+        "output": "Step 1: Find the total number of shells she found on the first 3 days by multiplying the number of shells found per day by the number of days:\n5 shells/day * 3 days = 15 shells\n\nStep 2: Add the number of shells she found on the fourth day:\n15 shells + 6 shells = 21 shells\n\nStep 3: Add the number of shells she had before vacation:\n20 shells + 21 shells = 41 shells\n\nAnswer: Shara has 41 shells now. (41)",
+        "answer": "41.0"
+    },
+    {
+        "instruction": "Darnel sprinted 0.875 of a lap and then took a break by jogging 0.75 of a lap. How much farther did Darnel sprint than jog?\n ",
+        "input": "",
+        "output": "Step 1: Find the total distance Darnel covered.\nTotal distance = distance sprinted + distance jogged\nTotal distance = 0.875 + 0.75\nTotal distance = 1.625 laps\n\nStep 2: Find the distance Darnel sprinted.\nDistance sprinted = 0.875 laps\n\nStep 3: Find the distance Darnel jogged.\nDistance jogged = 0.75 laps\n\nStep 4: Find the difference between the distance Darnel sprinted and jogged.\nDifference = Distance sprinted - Distance jogged\nDifference = 0.875 - 0.75\nDifference = 0.125 laps\n\nTherefore, Darnel sprinted 0.875 laps and jogged 0.75 laps. Darnel sprinted 0.125 laps farther than jogged. The answer in arabic numerals is 0.125.",
+        "answer": "0.125"
+    },
+    {
+        "instruction": "Austin bought his seven friends each a robot. Each robot costs $8.75.  He was charged $7.22 total for tax. He left with $11.53 in change. How much did Austin start with?\n ",
+        "input": "",
+        "output": "Step 1: Find the total cost of the robots.\n7 friends x $8.75 per robot = $61.25\n\nStep 2: Add the tax to the total cost of the robots.\n$61.25 + $7.22 = $68.47\n\nStep 3: Subtract the total cost with tax from the amount Austin had after the purchase to find out how much he started with.\n$11.53 + $68.47 = $80.00 (amount Austin started with)\n\nAnswer: Austin started with $80.00.",
+        "answer": "80.0"
+    },
+    {
+        "instruction": "There were 28 bales of hay in the barn . Tim stacked bales in the barn today . There are now 54 bales of hay in the barn . How many bales did he store in the barn ?\n ",
+        "input": "",
+        "output": "To solve this problem, we need to use subtraction. We need to subtract the initial number of bales from the current number of bales to find out how many bales Tim stored in the barn.\n\n54 - 28 = 26\n\nTherefore, Tim stored 26 bales in the barn. The answer in Arabic numerals is 26.",
+        "answer": "26.0"
+    },
+    {
+        "instruction": "There are 46 children in the classroom , each student will get 4 dozen pencils . How many pencils will the teacher have to give out ?\n ",
+        "input": "",
+        "output": "First, we need to convert the number of children to the total number of pencils required. \n\n46 children x 4 dozen pencils = 184 dozen pencils \n\nNext, we need to convert the dozens to individual pencils. \n\n184 dozen pencils x 12 individual pencils = 2,208 individual pencils \n\nTherefore, the teacher will have to give out 2,208 pencils. \n\nArabic numeral answer: 2,208",
+        "answer": "2208.0"
+    },
+    {
+        "instruction": "A luxury bag costs $3000. A reseller wants to get a 15% profit. How much should she sell the bag?\n ",
+        "input": "",
+        "output": "To solve the problem, we have to add the reseller's desired profit to the cost of the bag to get the selling price. Here are the steps:\n\n1. Convert the percentage into a decimal: 15% = 0.15\n2. Multiply the cost of the bag by the decimal equivalent of the reseller's desired profit: 0.15 x $3000 = $450\n3. Add the profit to the cost of the bag: $3000 + $450 = $3450\n\nTherefore, the reseller should sell the bag for $3450.",
+        "answer": "3450.0"
+    },
+    {
+        "instruction": "Boy purchased two flats for Rs.5,00,000. On one he gains 15 % while on the other he losses 15%. How much does he gain or lose? The options are: A)1.25% B)2.1% C)2.25% D)2.65% E)3%\n ",
+        "input": "",
+        "output": "Let's start by calculating the cost of each flat:\n\nCost of each flat = 5,00,000 / 2 = 2,50,000\n\nNow, let's calculate the gain or loss on each flat:\n\n- On the first flat, the boy gains 15%. So, the selling price of the first flat = cost price + gain\nSelling price of first flat = 2,50,000 + (15/100)*2,50,000\nSelling price of first flat = 2,87,500\n\n- On the second flat, the boy loses 15%. So, the selling price of the second flat = cost price - loss\nSelling price of second flat = 2,50,000 - (15/100)*2,50,000\nSelling price of second flat = 2,12,500\n\nTotal selling price = 2,87,500 + 2,12,500 = 5,00,000\n\nTotal cost price = 2,50,000 + 2,50,000 = 5,00,000\n\nOverall gain or loss = (Total selling price - Total cost price) / Total cost price * 100\nOverall gain or loss = (5,00,000 - 5,00,000) / 5,00,000 * 100\nOverall gain or loss = 0%\n\nTherefore, the boy neither gains nor loses any money. The answer is 0% or option F.",
+        "answer": "C"
+    },
+    {
+        "instruction": "Mason, Noah and Jacob want to have an eating contest but can't agree on what food to eat. Mason wants hot dogs, Noah insists on burgers, and Jacob thinks they should eat pies. They finally agree that everyone can eat whatever they want and they'll use the weight of the food to determine who wins. A hot dog weighs 2 ounces, a burger weighs 5 ounces, and a pie weighs 10 ounces. Jacob eats three fewer pies than Noah eats burgers. Mason eats 3 times as many hotdogs as the number of pies consumed by Jacob. If Noah ate 8 burgers, what is the total weight of the hotdogs that Mason ate?\n ",
+        "input": "",
+        "output": "Step 1: Determine the number of pies Jacob ate.\nIf Noah ate 8 burgers, then Jacob ate 8 - 3 = 5 pies.\n\nStep 2: Determine the number of hotdogs Mason ate.\nMason ate 3 x 5 = 15 hotdogs.\n\nStep 3: Determine the total weight of the hotdogs Mason ate.\nSince a hotdog weighs 2 ounces, 15 hotdogs weigh 2 x 15 = 30 ounces.\n\nAnswer: The total weight of the hotdogs that Mason ate is 30 ounces.",
+        "answer": "30.0"
+    },
+    {
+        "instruction": "Dave was helping the cafeteria workers pick up lunch trays , but he could only carry 9 trays at a time . If he had to pick up 17 trays from one table and 55 trays from another , how many trips will he make ?\n ",
+        "input": "",
+        "output": "To solve this problem, we need to divide the total number of trays by the number of trays Dave can carry at a time and round up to the nearest whole number.\n\nStep 1: Add the number of trays from both tables together\n17 trays + 55 trays = 72 trays\n\nStep 2: Divide the total number of trays by the number of trays Dave can carry at a time\n72 trays \u00f7 9 trays per trip = 8 trips\n\nStep 3: Round up to the nearest whole number since Dave cannot make a fraction of a trip\n8 trips rounded up = 8 trips\n\nTherefore, Dave will make 8 trips to pick up all the trays. The answer is 8.",
+        "answer": "8.0"
+    },
+    {
+        "instruction": "Jason went to 11 football games this month . He went to 17 games last month , and plans to go to 16 games next month . How many games will he attend in all ?\n ",
+        "input": "",
+        "output": "To find the total number of games Jason will attend in all, we need to add up the number of games he attended in each month:\n\n11 games this month + 17 games last month + 16 games next month = 44 games in all\n\nTherefore, Jason will attend 44 games in all.",
+        "answer": "44.0"
+    },
+    {
+        "instruction": "Jerry has three times as many stickers as George. George has 6 fewer stickers than his brother Fred. If Fred has 18 stickers, how many stickers does Jerry have?\n ",
+        "input": "",
+        "output": "1. First, we need to find out how many stickers George has. We know that Fred has 18 stickers, and George has 6 fewer stickers than Fred. So, George has 18 - 6 = 12 stickers.\n2. Next, we need to find out how many stickers Jerry has. We know that Jerry has three times as many stickers as George. So, Jerry has 3 x 12 = 36 stickers.\n\nTherefore, Jerry has 36 stickers.",
+        "answer": "36.0"
+    },
+    {
+        "instruction": "Grant spends $200.00 a year to have the newspaper delivered daily to his house.  Juanita buys the newspaper daily.  Monday through Saturday, she spends $0.50 and on Sunday she spends $2.00.  How much more money does Juanita spend buying the newspaper yearly than Grant?\n ",
+        "input": "",
+        "output": "To find out how much Juanita spends yearly on newspapers, we need to first calculate how much she spends each week and then multiply that by 52 (the number of weeks in a year).\n\nJuanita spends $0.50 x 6 days (Monday through Saturday) = $3.00 per week on newspapers.\nJuanita spends $2.00 x 1 day (Sunday) = $2.00 per week on newspapers.\nJuanita spends $3.00 + $2.00 = $5.00 per week on newspapers.\n$5.00 x 52 weeks = $260.00 spent yearly on newspapers by Juanita.\n\nTo find out how much more Juanita spends than Grant, we need to subtract Grant's yearly expense from Juanita's yearly expense.\n\n$260.00 (Juanita's yearly expense) - $200.00 (Grant's yearly expense) = $60.00\n\nTherefore, Juanita spends $60.00 more than Grant on newspapers yearly. The answer is 60.",
+        "answer": "60.0"
+    },
+    {
+        "instruction": "Fran's school just instituted a school uniform policy. Each student needs to buy five complete uniforms, each consisting of pants, shirt, tie and socks. The pants cost $20, the shirt costs twice as much as the pants, the tie costs 1/5 as much as the shirt and the socks cost $3/pair. How many dollars will each student need to spend?\n ",
+        "input": "",
+        "output": "Step 1: Find the cost of one shirt\nThe shirt costs twice as much as the pants, so:\nshirt cost = 2 x pants cost\nshirt cost = 2 x $20\nshirt cost = $40\n\nStep 2: Find the cost of one tie\nThe tie costs 1/5 as much as the shirt, so:\ntie cost = 1/5 x shirt cost\ntie cost = 1/5 x $40\ntie cost = $8\n\nStep 3: Find the cost of one complete uniform\nTo find the cost of one complete uniform, we add up the cost of the pants, shirt, tie, and one pair of socks (since we need five complete uniforms):\ncost of one uniform = pants cost + shirt cost + tie cost + socks cost\ncost of one uniform = $20 + $40 + $8 + $3\ncost of one uniform = $71\n\nStep 4: Find the total cost for five complete uniforms\nSince each student needs to buy five complete uniforms, we multiply the cost of one uniform by 5:\ntotal cost = cost of one uniform x 5\ntotal cost = $71 x 5\ntotal cost = $355\n\nTherefore, each student will need to spend $355.",
+        "answer": "355.0"
+    },
+    {
+        "instruction": "If 3 crows eat 30 worms in one hour, how many worms will 5 crows eat in 2 hours?\n ",
+        "input": "",
+        "output": "Step 1: Find how many worms each crow eats in one hour by dividing the total worms eaten by the number of crows: 30 worms \u00f7 3 crows = 10 worms per crow per hour.\n\nStep 2: Multiply the number of worms eaten by each crow per hour by the number of crows and the number of hours: 10 worms/crow/hour \u00d7 5 crows \u00d7 2 hours = 100 worms.\n\nAnswer: 100 worms.",
+        "answer": "100.0"
+    },
+    {
+        "instruction": "Barney's grocery store sold out all of its items at the beginning of the pandemic, so they ordered extra items to restock the shelves. However, they ended up ordering far too much and have to keep the leftover items in the storeroom. If they ordered 4458 items, sold another 1561 items that day, and have 575 items in the storeroom, how many items do they have left in the whole store?\n ",
+        "input": "",
+        "output": "To find the total number of items left in the store, we need to add the number of items sold to the number of items left in the store because both of these are no longer in the inventory. We can then subtract this sum from the total number of items ordered to get the number of items left in the store. \n\nSo, the number of items left in the store would be: \n\n4458 (ordered items) - 1561 (sold items) + 575 (items in storeroom) = \n\n3472 items left in the whole store. \n\nTherefore, Barney's grocery store has a total of 3472 items left in the whole store.",
+        "answer": "3472.0"
+    },
+    {
+        "instruction": "What is the next number in the sequence below?\n1 4 9 16 25 36 49 __ ? The options are: A)64 B)46 C)47 D)48 E)49\n ",
+        "input": "",
+        "output": "The sequence is made up of the squares of natural numbers starting from 1. So, the next number in the sequence will be the square of the next natural number which is 8. \n\nTo verify this, we can calculate 8^2 = 64. \n\nTherefore, the answer is A) 64.",
+        "answer": "A"
+    },
+    {
+        "instruction": " Paul made 68 dollars mowing lawns and 13 dollars weed eating. If he only spent 9 dollar a week, how long would the money last him? \n ",
+        "input": "",
+        "output": "1. Add the amounts Paul made: 68 + 13 = 81 dollars\n2. Divide the total amount by his weekly expenses: 81 \u00f7 9 = 9 weeks\n3. Therefore, the money would last Paul 9 weeks. \n\nAnswer: 9",
+        "answer": "9.0"
+    },
+    {
+        "instruction": "Uncle Dave bought 143 ice cream sandwiches . If he wants to give them to his 11 hungry nieces , how many can each niece get ?\n ",
+        "input": "",
+        "output": "To solve this problem, you need to divide the total number of ice cream sandwiches by the number of nieces. \n\nThe equation for that would be:\n\n143 \u00f7 11 = \n\nTo solve this, you can use long division or a calculator. Either way, you will get:\n\n13\n\nTherefore, each niece can get 13 ice cream sandwiches.",
+        "answer": "13.0"
+    },
+    {
+        "instruction": "Jimmy and Tonya both like collecting matchbooks and stamps. Tonya and Jimmy decide to trade some stamps and matchbooks. They have each decided that one stamp is worth 12 matches. Each matchbook contains 24 matches. If Tonya arrives with 13 stamps, Jimmy has 5 matchbooks, and Jimmy trades all his matchbooks for stamps, how many stamps does Tonya have left?\n ",
+        "input": "",
+        "output": "First, we need to find out how many matches Jimmy has in total. Since he has 5 matchbooks, he has 5 x 24 = 120 matches.\nNext, we need to find out how many stamps Jimmy will get in exchange for his matches. Since 1 stamp is worth 12 matches, Jimmy will get 120 / 12 = 10 stamps.\nTherefore, Tonya will have 13 - 10 = 3 stamps left. \n\nAnswer: Tonya has 3 stamps left.",
+        "answer": "3.0"
+    },
+    {
+        "instruction": "Justin wanted to watch a movie that came on at 8 pm that night.  His parents agreed as long as he finished his homework and chores before the movie started.  He wouldn't be home until 5 pm because of baseball practice.  He knew dinner would take 45 minutes, and he figured his homework would take 30 minutes to finish.  He needed to clean his room, which would take 30 minutes; then take out the trash, which would take about 5 minutes; and empty the dishwasher,  which would take another 10 minutes.  What was the latest time that Justin could start his chores and homework to be done by 8 pm to watch his movie?\n ",
+        "input": "",
+        "output": "1. Justin wouldn't be home until 5 pm because of baseball practice.\n2. Dinner would take 45 minutes.\n3. Homework would take 30 minutes to finish.\n4. Cleaning his room would take 30 minutes.\n5. Taking out the trash would take about 5 minutes.\n6. Emptying the dishwasher would take another 10 minutes.\n7. The total time for Justin's chores and homework is: 30 + 30 + 5 + 10 + 45 = 120 minutes.\n8. Justin needs to finish all his chores and homework before 8 pm.\n9. The latest time Justin can start his chores and homework is: 8 pm - 120 minutes = 6 pm.\n\nTherefore, the latest time Justin can start his chores and homework to be done by 8 pm to watch his movie is 6 pm.",
+        "answer": "6.0"
+    },
+    {
+        "instruction": " Sarah picked 45 apples. Her brother picked 9 apples. How many times as many apples did Sarah pick?\n ",
+        "input": "",
+        "output": "To find out how many times as many apples Sarah picked than her brother, we need to divide the number of apples Sarah picked by the number of apples her brother picked:\n\n45 \u00f7 9 = 5\n\nTherefore, Sarah picked 5 times as many apples as her brother.\n\nThe answer in arabic numerals is 5.",
+        "answer": "5.0"
+    },
+    {
+        "instruction": "Sandy grew 6 carrots. Sam grew 3 carrots. How many carrots did they grow in total ?\n ",
+        "input": "",
+        "output": "To find the total number of carrots Sandy and Sam grew, we need to add the number of carrots they each grew.\n\n6 + 3 = 9\n\nTherefore, Sandy and Sam grew a total of 9 carrots. The answer in Arabic numerals is 9.",
+        "answer": "9.0"
+    },
+    {
+        "instruction": " Mike made 42 dollars mowing lawns over the summer. If he spent 10 dollars buying new mower blades, how many 8 dollar games could he buy with the money he had left? \n ",
+        "input": "",
+        "output": "1. Calculate how much money Mike has left after buying new mower blades:\n42 dollars - 10 dollars = 32 dollars\n\n2. Divide the money Mike has left by the cost of each game:\n32 dollars \u00f7 8 dollars = 4 games\n\nAnswer: Mike can buy 4 games with the money he has left.",
+        "answer": "4.0"
+    },
+    {
+        "instruction": "Kim buys 3 pizzas.  They are 12 slices each.  The pizza cost $72.  How much did 5 slices cost?\n ",
+        "input": "",
+        "output": "To solve this problem, we need to first find the total number of slices in 3 pizzas:\n\nTotal number of slices = 3 pizzas x 12 slices per pizza = 36 slices\n\nNext, we need to determine the cost per slice:\n\nCost per slice = Total cost / Total number of slices = $72 / 36 slices = $2 per slice\n\nFinally, we can find the cost of 5 slices by multiplying the cost per slice by 5:\n\nCost of 5 slices = $2 per slice x 5 slices = $10\n\nTherefore, 5 slices cost $10. The answer in Arabic numerals is 10.",
+        "answer": "10.0"
+    },
+    {
+        "instruction": "Katie has 13 pink marbles. She has 9 fewer orange marbles than pink marbles. She has 4 times as many purple marbles as orange marbles. How many marbles does Katie have in all?\n ",
+        "input": "",
+        "output": "Step 1: Find the number of orange marbles.\nKatie has 9 fewer orange marbles than pink marbles, so she has 13 - 9 = 4 orange marbles.\n\nStep 2: Find the number of purple marbles.\nKatie has 4 times as many purple marbles as orange marbles, so she has 4 x 4 = 16 purple marbles.\n\nStep 3: Add up all the marbles.\nKatie has 13 pink marbles + 4 orange marbles + 16 purple marbles = 33 marbles in all.\n\nTherefore, Katie has 33 marbles in all.",
+        "answer": "33.0"
+    },
+    {
+        "instruction": "Lana aims to sell 20 muffins at the bake sale. She sells 12 muffins in the morning. She sells another 4 in the afternoon. How many more muffins does Lana need to sell to hit her goal?\n ",
+        "input": "",
+        "output": "To solve the problem, we can use subtraction:\nStep 1: Add the number of muffins sold in the morning and the afternoon: 12 + 4 = 16\nStep 2: Subtract the total number of muffins sold from the goal: 20 - 16 = 4\n\nTherefore, Lana needs to sell 4 more muffins to hit her goal. The answer in Arabic numerals is 4.",
+        "answer": "4.0"
+    },
+    {
+        "instruction": "John goes to the store to buy Slurpees and gives them $20.  Slurpees cost $2 each and he got $8 in change.  How many Slurpees did he buy?\n ",
+        "input": "",
+        "output": "Let's start by subtracting the change from the amount John gave to the store: \n\n$20 - $8 = $12 \n\nThis means John spent $12 on Slurpees. \n\nWe know that each Slurpee costs $2, so we can divide the amount John spent by the cost of each Slurpee: \n\n$12 \u00f7 $2 = 6 \n\nTherefore, John bought 6 Slurpees. \n\nThe answer in Arabic numerals is: 6.",
+        "answer": "6.0"
+    },
+    {
+        "instruction": "Jerry had 63 pieces of candy.  He divided them up equally into 9 bags.  2 of the bags had chocolate hearts.  3 of the bags were chocolate kisses.  The rest of the bags were not chocolate.  How many pieces of candy were not chocolate?\n ",
+        "input": "",
+        "output": "To solve the problem, we can start by finding out how many pieces of candy there are in each bag. \n\n63 pieces of candy \u00f7 9 bags = 7 pieces of candy per bag \n\nNext, we can use that information to determine how many bags were not chocolate. \n\n2 bags of chocolate hearts + 3 bags of chocolate kisses = 5 bags of chocolate candy \n\n9 total bags - 5 bags of chocolate candy = 4 bags that were not chocolate \n\nFinally, we can calculate the total number of pieces of candy that were not chocolate. \n\n4 bags that were not chocolate x 7 pieces of candy per bag = 28 pieces of candy that were not chocolate \n\nTherefore, the answer is: \n\n28 pieces of candy were not chocolate.",
+        "answer": "28.0"
+    },
+    {
+        "instruction": "Legoland has 5 kangaroos for each koala. If Legoland has 180 kangaroos, how many koalas and kangaroos are there altogether?\n ",
+        "input": "",
+        "output": "Let's set up the problem using variables. \n\nLet's say K represents the number of koalas. \n\nWe know that there are 5 kangaroos for each koala, so the number of kangaroos can be represented as 5K. \n\nWe also know that there are 180 kangaroos in total, so we can set up an equation: \n\n5K = 180 \n\nTo solve for K, we can divide both sides by 5: \n\nK = 36 \n\nSo there are 36 koalas in Legoland. \n\nTo find the total number of animals, we can add the number of koalas and kangaroos: \n\nK + 5K = 6K \n\n6K = 6(36) = 216 \n\nSo there are 216 animals in total in Legoland. \n\nTherefore, the answer is: \n\nThere are 36 koalas and 180 kangaroos in Legoland, making a total of 216 animals.",
+        "answer": "216.0"
+    },
+    {
+        "instruction": "The average age of students of a class is 15.8 years. The average age of boys in the class is 16.4 years and that of the girls is 15.1 years, The ratio of the number of boys to the number of girls in the class is The options are: A)7 : 6 B)2 : 3 C)9 : 3 D)6 : 3 E)2 : 5\n ",
+        "input": "",
+        "output": "Let the total number of students in the class be x, and let the number of boys be y and the number of girls be z. \n\nWe know that:\n\ny + z = x  (equation 1)  (the total number of students is the sum of the number of boys and girls) \n\nThe average age of all students is 15.8, so:\n\n(sum of all ages) / x = 15.8 \n\nsum of all ages = 15.8x \n\nWe also know that:\n\n(sum of boys' ages) / y = 16.4 \n\nsum of boys' ages = 16.4y \n\nAnd:\n\n(sum of girls' ages) / z = 15.1 \n\nsum of girls' ages = 15.1z \n\nNow we can set up another equation using the information about the sum of all ages:\n\nsum of all ages = sum of boys' ages + sum of girls' ages \n\n15.8x = 16.4y + 15.1z \n\nWe can simplify this by dividing everything by 0.7:\n\n22.57x = 32y + 21.57z \n\nNow we have two equations (equation 1 and the simplified version of the equation above) with two variables (y and z). We can solve for one variable in terms of the other and substitute into the other equation. \n\nFrom equation 1, we know that y = x - z. \n\nSubstituting into the other equation, we get:\n\n22.57x = 32(x-z) + 21.57z \n\n22.57x = 32x - 32z + 21.57z \n\n9.43x = 10.43z \n\nx/z = 10.43/9.43 \n\nSimplifying this ratio, we get:\n\nx/z = 1.107 \n\nTo find the ratio of boys to girls, we can use the fact that y + z = x:\n\ny/z + 1 = x/z \n\ny/z = (x/z) - 1 \n\ny/z = 1.107 - 1 \n\ny/z = 0.107 \n\nFinally, we can write this ratio as a fraction and simplify:\n\ny/z = 107/1000 \n\nThe closest option to this ratio is A) 7:6, so the answer is A) 7:6.",
+        "answer": "A"
+    },
+    {
+        "instruction": "To upgrade her kitchen, Amanda is changing out the doorknobs/pulls.  She\u2019s replacing 18 cabinet knobs, which cost $2.50 each and 8 drawer pulls which cost $4.00.  How much will the kitchen upgrade cost her?\n ",
+        "input": "",
+        "output": "The cost of replacing 18 cabinet knobs is 18 x $2.50 = $45.\nThe cost of replacing 8 drawer pulls is 8 x $4.00 = $32.\nTherefore, the total cost of the kitchen upgrade is $45 + $32 = $77.\n\nSteps:\n1. Multiply the number of cabinet knobs (18) by the cost per knob ($2.50) to get the cost of replacing the knobs: 18 x $2.50 = $45.\n2. Multiply the number of drawer pulls (8) by the cost per pull ($4.00) to get the cost of replacing the pulls: 8 x $4.00 = $32.\n3. Add the cost of the knobs and the cost of the pulls together to get the total cost of the kitchen upgrade: $45 + $32 = $77. \n\nAnswer: $77.",
+        "answer": "77.0"
+    },
+    {
+        "instruction": "Jack has four plates with a flower pattern and 8 plates with a checked pattern. He buys new twice as many polka dotted plates as the number of checked plates he currently has, then smashes one of the flowered plates. How many plates does he have left?\n ",
+        "input": "",
+        "output": "Step 1: Jack has a total of 4 + 8 = 12 plates.\nStep 2: He buys 2 x 8 = 16 polka dotted plates.\nStep 3: After the purchase, he has a total of 12 + 16 = 28 plates.\nStep 4: He smashes one of the flowered plates, so he now has 28 - 1 = 27 plates left.\n\nTherefore, Jack has 27 plates left.",
+        "answer": "27.0"
+    },
+    {
+        "instruction": "Javier plays 2 baseball games a week. In each of his first 20 games, he averaged 2 hits. If he has 10 games left, how many hits a game does he have to average to bring his average for the season up to 3 hits a game?\n ",
+        "input": "",
+        "output": "Since Javier has played 20 games and averaged 2 hits per game, he has a total of 20 x 2 = <<20*2=40>>40 hits so far.\n\nTo average 3 hits per game over a total of 30 games (20 played + 10 to be played), Javier needs a total of 30 x 3 = <<30*3=90>>90 hits.\n\nTo achieve 90 hits in 30 games, Javier needs to get 90 - 40 = <<90-40=50>>50 hits in his remaining 10 games.\n\nTherefore, Javier needs to average 5 hits per game in his remaining 10 games to achieve 50 hits in total.\n\nHence, the answer is 5.",
+        "answer": "5.0"
+    },
+    {
+        "instruction": "Max loves to play video games. He played for 2 hours on Wednesday and the same time on Thursday. On Friday his friends came to play together with him, so Max spent over three hours more on playing than on Wednesday. How many hours on average has Max spent playing video games during these three days?\n ",
+        "input": "",
+        "output": "Max played for 2 hours on Wednesday and 2 hours on Thursday, which gives us a total of 4 hours for those two days. \n\nOn Friday, Max played for over three hours more than he did on Wednesday, which means he played for at least 2 + 3 = 5 hours on Friday. \n\nSo, the total number of hours Max played during these three days is 4 + 5 = 9 hours. \n\nTo find the average number of hours Max played per day, we need to divide the total number of hours by the number of days: \n\nAverage = Total / Number of days\n\nAverage = 9 / 3 \n\nAverage = 3 \n\nTherefore, Max played an average of 3 hours per day during these three days.",
+        "answer": "3.0"
+    },
+    {
+        "instruction": "The region east of plain A is 50 square miles less than the region east of plain B. If plain B has 200 square miles, how many square miles do the plains have in total?\n ",
+        "input": "",
+        "output": "Let's call the region east of plain A \"x\". \n\nAccording to the problem, we know that: \nx = (region east of plain B) - 50 \n\nWe also know that the region east of plain B is 200 square miles. So: \nx = 200 - 50 \nx = 150 \n\nTherefore, the region east of plain A is 150 square miles. \n\nTo find the total square miles of the plains, we need to add up the regions east of both plains A and B: \nTotal square miles = region east of plain A + region east of plain B \nTotal square miles = 150 + 200 \nTotal square miles = 350 \n\nSo the total square miles of the plains is 350.",
+        "answer": "350.0"
+    },
+    {
+        "instruction": "James buys 3 dirt bikes for $150 each and 4 off-road vehicles for $300 each.  It also cost him $25 to register each of these.  How much did he pay for everything?\n ",
+        "input": "",
+        "output": "The cost of 3 dirt bikes at $150 each is 3 x $150 = $<<3*150=450>>450.\nThe cost of 4 off-road vehicles at $300 each is 4 x $300 = $<<4*300=1200>>1200.\nThe cost of registering 7 vehicles is 7 x $25 = $<<7*25=175>>175.\nTherefore, James paid a total of $450 + $1200 + $175 = $<<450+1200+175=1825>>1825. Answer: \\boxed{1825}.",
+        "answer": "1825.0"
+    },
+    {
+        "instruction": "Latia wants to buy a Samsung TV worth $1700. She works for a delivery service company for a month earning $10 per hour for a 30-hour workweek. How many more hours does she have to work to buy the TV?\n ",
+        "input": "",
+        "output": "First, we need to calculate Latia's monthly earnings:\n$10/hour x 30 hours/week x 4 weeks/month = $1200/month\n\nNext, we need to determine how much more money Latia needs to earn to buy the TV:\n$1700 - $1200 = $500\n\nFinally, we need to calculate how many more hours Latia needs to work to earn the remaining $500:\n$500 \u00f7 $10/hour = 50 hours\n\nTherefore, Latia needs to work 50 more hours to earn enough money to buy the Samsung TV. Answer: 50.",
+        "answer": "50.0"
+    },
+    {
+        "instruction": "Sammy has 8 gifts to wrap. Each gift requires 1.5 meters of ribbon. Unfortunately, she has no available ribbon so Tom let her use his 15-meter long ribbon. How many meters of ribbon will be left from Tom's ribbon?\n ",
+        "input": "",
+        "output": "1. Find the total length of ribbon needed by multiplying the number of gifts by the length of ribbon needed per gift:\n8 gifts x 1.5 meters of ribbon per gift = 12 meters of ribbon needed\n\n2. Subtract the total length of ribbon needed from the length of ribbon Tom has:\n15 meters of ribbon - 12 meters of ribbon needed = 3 meters of ribbon left\n\nTherefore, Sammy will have 3 meters of ribbon left from Tom's ribbon.",
+        "answer": "3.0"
+    },
+    {
+        "instruction": "Samara and three of her friends heard alligators spotted on the local river and decided to join a search organized by the wildlife service to capture the animals. After searching the whole day, Samara had seen 20 alligators while her friends had seen an average of 10 alligators each. Calculate the total number of alligators Samara and her friends saw.\n ",
+        "input": "",
+        "output": "To find the total number of alligators Samara and her friends saw, we need to add the number of alligators Samara saw to the number her friends saw.\n\nNumber of alligators Samara saw = 20\n\nTo find the total number her friends saw, we need to multiply the average number of alligators each of her three friends saw by the number of friends.\n\nAverage number of alligators each of her three friends saw = 10\nNumber of friends = 3\nTotal number her friends saw = 10 x 3 = 30\n\nTo find the total number of alligators Samara and her friends saw, we add the number Samara saw to the number her friends saw:\n\nTotal number of alligators = 20 + 30 = 50\n\nTherefore, Samara and her friends saw a total of 50 alligators.",
+        "answer": "50.0"
+    },
+    {
+        "instruction": " A vase can hold 5 flowers. If you had 6 carnations and 19 roses, how many vases would you need to hold the flowers? \n ",
+        "input": "",
+        "output": "Step 1: Find the total number of flowers.\n      Total number of flowers = 6 carnations + 19 roses\n      Total number of flowers = 25\n\nStep 2: Divide the total number of flowers by the number of flowers a vase can hold.\n      Number of vases = Total number of flowers \u00f7 Number of flowers per vase\n      Number of vases = 25 \u00f7 5\n      Number of vases = 5\n\nTherefore, you would need 5 vases to hold 6 carnations and 19 roses. The answer in Arabic numerals is 5.",
+        "answer": "5.0"
+    },
+    {
+        "instruction": "Tina is getting $20 for each book she sells. If she realizes a $120 profit on her sales, how many people have she sold the books to if each book costs $5 to make and every customer buys 2 at a time?\n ",
+        "input": "",
+        "output": "Let x be the number of customers Tina has sold the books to.\n\nSince each customer buys 2 books at a cost of $5 each, the cost to produce the books for x customers is 2*5*x = 10x.\n\nTina earns $20 for each book she sells, so her total earnings from selling x customers is 20*2*x = 40x.\n\nThe profit Tina earns from selling x customers is her earnings minus her costs, so:\n\n40x - 10x = 120\n\nSimplifying and solving for x:\n\n30x = 120\n\nx = 4\n\nTherefore, Tina has sold the books to 4 customers.",
+        "answer": "4.0"
+    },
+    {
+        "instruction": "Wyatt's mother gave him $74 to go to the store. Wyatt bought 5 loaves of bread and 4 cartons of orange juice. Each loaf of bread cost $5 and each carton of orange juice cost $2. How much money does Wyatt have left?\n ",
+        "input": "",
+        "output": "Step 1: Find the total cost of the bread by multiplying the cost per loaf by the number of loaves: 5 loaves x $5/loaf = $25\nStep 2: Find the total cost of the orange juice by multiplying the cost per carton by the number of cartons: 4 cartons x $2/carton = $8\nStep 3: Find the total cost of the items by adding the cost of the bread and the cost of the orange juice: $25 + $8 = $33\nStep 4: Subtract the total cost of the items from the amount of money Wyatt started with: $74 - $33 = $41\n\nTherefore, Wyatt has $41 left.",
+        "answer": "41.0"
+    },
+    {
+        "instruction": "Megan is delivering meals on wheels. Out of her 30 clients, 7 need vegan meals, 8 need kosher meals, and three people need meals that are both vegan and kosher. How many meals does Megan deliver that are neither kosher nor vegan?\n ",
+        "input": "",
+        "output": "To solve the problem, we can use the formula:\n\nTotal meals = Vegan meals + Kosher meals - Both vegan and kosher meals + Neither vegan nor kosher meals\n\nWe know that Megan has 30 clients, and out of those, 7 need vegan meals and 8 need kosher meals. Three people need meals that are both vegan and kosher, so we can subtract them from the total vegan and kosher meals to avoid counting them twice:\n\nTotal vegan meals = 7\nTotal kosher meals = 8\nBoth vegan and kosher meals = 3\n\nTotal meals = 7 + 8 - 3 + Neither vegan nor kosher meals\n\nWe can simplify the equation:\n\nTotal meals = 12 + Neither vegan nor kosher meals\n\nWe also know that the total meals Megan delivers is 30, so we can substitute that in the equation:\n\n30 = 12 + Neither vegan nor kosher meals\n\nWe can solve for Neither vegan nor kosher meals:\n\nNeither vegan nor kosher meals = 30 - 12 = 18\n\nTherefore, Megan delivers 18 meals that are neither kosher nor vegan.",
+        "answer": "18.0"
+    },
+    {
+        "instruction": "Tom had 5 books . If he sold 4 of them and used the money he earned to buy 38 new books , how many books would Tom have ?\n ",
+        "input": "",
+        "output": "1. Tom had 5 books.\n2. He sold 4 books, so he now has 5 - 4 = 1 book.\n3. He used the money he earned from selling the books to buy 38 new books.\n4. Adding the 1 book he kept to the 38 new books he bought, Tom would have 1 + 38 = 39 books.\n\nTherefore, Tom would have 39 books.",
+        "answer": "39.0"
+    },
+    {
+        "instruction": "Frank's laundry detergent is double concentrated and will wash 80 loads of laundry.  His detergent is usually $25.00 a bottle but they're having a sale.  If he buys 2 bottles, both bottles will drop to $20.00 a bottle.  How much does he spend, in cents, per load of laundry, if he buys 2 bottles of detergent?\n ",
+        "input": "",
+        "output": "First, let's calculate the regular cost per load of laundry: \n\n$25.00 per bottle / 80 loads per bottle = $0.3125 per load \n\nNow let's calculate the cost per load during the sale: \n\n$20.00 per bottle / 80 loads per bottle = $0.25 per load \n\nSince Frank is buying 2 bottles during the sale, he will have a total of 160 loads of laundry worth of detergent. \n\n2 bottles * 80 loads per bottle = 160 loads \n\nSo the total cost during the sale will be: \n\n2 bottles * $20.00 per bottle = $40.00 \n\nTo calculate the cost per load during the sale, we divide the total cost by the number of loads: \n\n$40.00 / 160 loads = $0.25 per load \n\nTherefore, Frank will spend 25 cents per load of laundry if he buys 2 bottles of detergent during the sale. \n\nAs an Arabic numeral, the answer is: \n\n$0.25 per load = 25 cents per load",
+        "answer": "25.0"
+    },
+    {
+        "instruction": "10 business executives and 3 chairmen meet at a conference. If each business executive shakes the hand of every other business executive and every chairman once, and each chairman shakes the hand of each of the business executives but not the other chairmen, how many handshakes would take place? The options are: A)144 B)131 C)115 D)90 E)75\n ",
+        "input": "",
+        "output": "There are 10 business executives and 3 chairmen, so there are 10+3 = 13 people at the conference.\n\nEach business executive shakes hands with every other business executive, which means that each executive shakes hands with 9 other executives (since they don't shake hands with themselves). This gives a total of 10 x 9 = 90 handshakes among the business executives.\n\nEach chairman shakes hands with all 10 business executives, but not with the other chairmen. So each chairman shakes hands with 10 people. This gives a total of 3 x 10 = 30 handshakes between the chairmen and the business executives.\n\nTherefore, the total number of handshakes is 90 + 30 = 120.\n\nThe correct option is not among the given ones, but the correct answer is 120.",
+        "answer": "E"
+    }
+]
