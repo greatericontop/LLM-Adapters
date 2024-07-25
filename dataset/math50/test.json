@@ -60,12 +60,6 @@
         "answer": "3450.0"
     },
     {
-        "instruction": "Boy purchased two flats for Rs.5,00,000. On one he gains 15 % while on the other he losses 15%. How much does he gain or lose? The options are: A)1.25% B)2.1% C)2.25% D)2.65% E)3%\n ",
-        "input": "",
-        "output": "Let's start by calculating the cost of each flat:\n\nCost of each flat = 5,00,000 / 2 = 2,50,000\n\nNow, let's calculate the gain or loss on each flat:\n\n- On the first flat, the boy gains 15%. So, the selling price of the first flat = cost price + gain\nSelling price of first flat = 2,50,000 + (15/100)*2,50,000\nSelling price of first flat = 2,87,500\n\n- On the second flat, the boy loses 15%. So, the selling price of the second flat = cost price - loss\nSelling price of second flat = 2,50,000 - (15/100)*2,50,000\nSelling price of second flat = 2,12,500\n\nTotal selling price = 2,87,500 + 2,12,500 = 5,00,000\n\nTotal cost price = 2,50,000 + 2,50,000 = 5,00,000\n\nOverall gain or loss = (Total selling price - Total cost price) / Total cost price * 100\nOverall gain or loss = (5,00,000 - 5,00,000) / 5,00,000 * 100\nOverall gain or loss = 0%\n\nTherefore, the boy neither gains nor loses any money. The answer is 0% or option F.",
-        "answer": "C"
-    },
-    {
         "instruction": "Mason, Noah and Jacob want to have an eating contest but can't agree on what food to eat. Mason wants hot dogs, Noah insists on burgers, and Jacob thinks they should eat pies. They finally agree that everyone can eat whatever they want and they'll use the weight of the food to determine who wins. A hot dog weighs 2 ounces, a burger weighs 5 ounces, and a pie weighs 10 ounces. Jacob eats three fewer pies than Noah eats burgers. Mason eats 3 times as many hotdogs as the number of pies consumed by Jacob. If Noah ate 8 burgers, what is the total weight of the hotdogs that Mason ate?\n ",
         "input": "",
         "output": "Step 1: Determine the number of pies Jacob ate.\nIf Noah ate 8 burgers, then Jacob ate 8 - 3 = 5 pies.\n\nStep 2: Determine the number of hotdogs Mason ate.\nMason ate 3 x 5 = 15 hotdogs.\n\nStep 3: Determine the total weight of the hotdogs Mason ate.\nSince a hotdog weighs 2 ounces, 15 hotdogs weigh 2 x 15 = 30 ounces.\n\nAnswer: The total weight of the hotdogs that Mason ate is 30 ounces.",
@@ -112,12 +106,6 @@
         "input": "",
         "output": "To find the total number of items left in the store, we need to add the number of items sold to the number of items left in the store because both of these are no longer in the inventory. We can then subtract this sum from the total number of items ordered to get the number of items left in the store. \n\nSo, the number of items left in the store would be: \n\n4458 (ordered items) - 1561 (sold items) + 575 (items in storeroom) = \n\n3472 items left in the whole store. \n\nTherefore, Barney's grocery store has a total of 3472 items left in the whole store.",
         "answer": "3472.0"
-    },
-    {
-        "instruction": "What is the next number in the sequence below?\n1 4 9 16 25 36 49 __ ? The options are: A)64 B)46 C)47 D)48 E)49\n ",
-        "input": "",
-        "output": "The sequence is made up of the squares of natural numbers starting from 1. So, the next number in the sequence will be the square of the next natural number which is 8. \n\nTo verify this, we can calculate 8^2 = 64. \n\nTherefore, the answer is A) 64.",
-        "answer": "A"
     },
     {
         "instruction": " Paul made 68 dollars mowing lawns and 13 dollars weed eating. If he only spent 9 dollar a week, how long would the money last him? \n ",
@@ -196,12 +184,6 @@
         "input": "",
         "output": "Let's set up the problem using variables. \n\nLet's say K represents the number of koalas. \n\nWe know that there are 5 kangaroos for each koala, so the number of kangaroos can be represented as 5K. \n\nWe also know that there are 180 kangaroos in total, so we can set up an equation: \n\n5K = 180 \n\nTo solve for K, we can divide both sides by 5: \n\nK = 36 \n\nSo there are 36 koalas in Legoland. \n\nTo find the total number of animals, we can add the number of koalas and kangaroos: \n\nK + 5K = 6K \n\n6K = 6(36) = 216 \n\nSo there are 216 animals in total in Legoland. \n\nTherefore, the answer is: \n\nThere are 36 koalas and 180 kangaroos in Legoland, making a total of 216 animals.",
         "answer": "216.0"
-    },
-    {
-        "instruction": "The average age of students of a class is 15.8 years. The average age of boys in the class is 16.4 years and that of the girls is 15.1 years, The ratio of the number of boys to the number of girls in the class is The options are: A)7 : 6 B)2 : 3 C)9 : 3 D)6 : 3 E)2 : 5\n ",
-        "input": "",
-        "output": "Let the total number of students in the class be x, and let the number of boys be y and the number of girls be z. \n\nWe know that:\n\ny + z = x  (equation 1)  (the total number of students is the sum of the number of boys and girls) \n\nThe average age of all students is 15.8, so:\n\n(sum of all ages) / x = 15.8 \n\nsum of all ages = 15.8x \n\nWe also know that:\n\n(sum of boys' ages) / y = 16.4 \n\nsum of boys' ages = 16.4y \n\nAnd:\n\n(sum of girls' ages) / z = 15.1 \n\nsum of girls' ages = 15.1z \n\nNow we can set up another equation using the information about the sum of all ages:\n\nsum of all ages = sum of boys' ages + sum of girls' ages \n\n15.8x = 16.4y + 15.1z \n\nWe can simplify this by dividing everything by 0.7:\n\n22.57x = 32y + 21.57z \n\nNow we have two equations (equation 1 and the simplified version of the equation above) with two variables (y and z). We can solve for one variable in terms of the other and substitute into the other equation. \n\nFrom equation 1, we know that y = x - z. \n\nSubstituting into the other equation, we get:\n\n22.57x = 32(x-z) + 21.57z \n\n22.57x = 32x - 32z + 21.57z \n\n9.43x = 10.43z \n\nx/z = 10.43/9.43 \n\nSimplifying this ratio, we get:\n\nx/z = 1.107 \n\nTo find the ratio of boys to girls, we can use the fact that y + z = x:\n\ny/z + 1 = x/z \n\ny/z = (x/z) - 1 \n\ny/z = 1.107 - 1 \n\ny/z = 0.107 \n\nFinally, we can write this ratio as a fraction and simplify:\n\ny/z = 107/1000 \n\nThe closest option to this ratio is A) 7:6, so the answer is A) 7:6.",
-        "answer": "A"
     },
     {
         "instruction": "To upgrade her kitchen, Amanda is changing out the doorknobs/pulls.  She\u2019s replacing 18 cabinet knobs, which cost $2.50 each and 8 drawer pulls which cost $4.00.  How much will the kitchen upgrade cost her?\n ",
@@ -292,11 +274,5 @@
         "input": "",
         "output": "First, let's calculate the regular cost per load of laundry: \n\n$25.00 per bottle / 80 loads per bottle = $0.3125 per load \n\nNow let's calculate the cost per load during the sale: \n\n$20.00 per bottle / 80 loads per bottle = $0.25 per load \n\nSince Frank is buying 2 bottles during the sale, he will have a total of 160 loads of laundry worth of detergent. \n\n2 bottles * 80 loads per bottle = 160 loads \n\nSo the total cost during the sale will be: \n\n2 bottles * $20.00 per bottle = $40.00 \n\nTo calculate the cost per load during the sale, we divide the total cost by the number of loads: \n\n$40.00 / 160 loads = $0.25 per load \n\nTherefore, Frank will spend 25 cents per load of laundry if he buys 2 bottles of detergent during the sale. \n\nAs an Arabic numeral, the answer is: \n\n$0.25 per load = 25 cents per load",
         "answer": "25.0"
-    },
-    {
-        "instruction": "10 business executives and 3 chairmen meet at a conference. If each business executive shakes the hand of every other business executive and every chairman once, and each chairman shakes the hand of each of the business executives but not the other chairmen, how many handshakes would take place? The options are: A)144 B)131 C)115 D)90 E)75\n ",
-        "input": "",
-        "output": "There are 10 business executives and 3 chairmen, so there are 10+3 = 13 people at the conference.\n\nEach business executive shakes hands with every other business executive, which means that each executive shakes hands with 9 other executives (since they don't shake hands with themselves). This gives a total of 10 x 9 = 90 handshakes among the business executives.\n\nEach chairman shakes hands with all 10 business executives, but not with the other chairmen. So each chairman shakes hands with 10 people. This gives a total of 3 x 10 = 30 handshakes between the chairmen and the business executives.\n\nTherefore, the total number of handshakes is 90 + 30 = 120.\n\nThe correct option is not among the given ones, but the correct answer is 120.",
-        "answer": "E"
     }
 ]
