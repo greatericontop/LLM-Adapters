@@ -97,8 +97,9 @@ def main(
     pbar = tqdm(total=total)
     for idx, data in enumerate(dataset):
         instruction = data.get('instruction')
+        input_ = data.get('input')
 
-        outputs = evaluate(instruction)
+        outputs = evaluate(instruction, input_)
         label = data.get('answer')
         flag = False
         if args.dataset.lower() in ['aqua', 'apchem']:  # apchem
@@ -118,12 +119,13 @@ def main(
         new_data['pred'] = predict
         new_data['flag'] = flag
         output_data.append(new_data)
-        print(' ')
-        print('---------------')
+        print('\n')
+        print('\033[0;35m---------------\033[0;0m')
+        print(f'\033[0;37m{instruction}\033[0;0m\n')
         print(outputs)
-        print('prediction:', predict)
-        print('label:', label)
-        print('---------------')
+        print(f'\033[0;36mprediction: {predict}\033[0;0m')
+        print(f'\033[0;36mcorrect: {label}\033[0;0m')
+        print('\033[0;35m---------------\033[0;0m')
         print(f'\rtest:{idx + 1}/{total} | accuracy {correct}  {correct / (idx + 1)}')
         with open(save_file, 'w+') as f:
             json.dump(output_data, f, indent=4)
