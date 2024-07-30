@@ -9,6 +9,8 @@ import fire
 
 import torch
 
+import prompt
+
 sys.path.append(os.path.join(os.getcwd(), "peft/src/"))
 from peft import PeftModel
 from tqdm import tqdm
@@ -45,7 +47,7 @@ def main(
             #max_new_tokens=256,
             **kwargs,
     ):
-        prompt = generate_prompt(instruction, input)
+        prompt = generate_prompt(instruction)
         inputs = tokenizer(prompt, return_tensors="pt")
         input_ids = inputs["input_ids"].to(device)
         generation_config = GenerationConfig(
@@ -141,14 +143,8 @@ def create_dir(dir_path):
     return
 
 
-def generate_prompt(instruction, input=None):
-    return f"""Below is an instruction that describes a question. Write a response that appropriately completes the question. Your response must end with your final answer.
-
-               ### Question:
-               {instruction}
-
-               ### Response:
-               """  # noqa: E501
+def generate_prompt(instruction):
+    return prompt.get_eval_prompt(instruction)
     # return f"""Below is an instruction that describes a question, paired with the answer choices that you can select. Write a response that appropriately completes the question. Your response must end with "Therefore, the correct answer is LETTER", with the letter A, B, C, or D, indicating your final answer choice.
     #
     #            ### Instruction:

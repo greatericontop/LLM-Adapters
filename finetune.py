@@ -8,6 +8,8 @@ import transformers
 from datasets import load_dataset
 from typing import List, Optional, Union
 
+import prompt
+
 """
 Unused imports:
 import torch.nn as nn
@@ -323,13 +325,7 @@ def train(
 
 def generate_prompt(data_point):
     # sorry about the formatting disaster gotta move fast
-    return f"""Below is an instruction that describes a question. Write a response that appropriately completes the question. Your response must end with your final answer.
-
-               ### Question:
-               {data_point["instruction"]}
-
-               ### Response:
-               {data_point["output"]}"""  # noqa: E501
+    return prompt.get_finetune_prompt(data_point["instruction"], data_point["output"])
     # if data_point["input"]:
     #     return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
     #
