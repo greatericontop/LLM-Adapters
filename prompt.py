@@ -1,5 +1,6 @@
 
-_instr = 'Below is an instruction that describes a question. Write a response that appropriately completes the question. Your response must end with your final answer. Follow the example given.'
+#_instr = 'Below is an instruction that describes a question. Write a response that appropriately completes the question. Your response must end with your final answer. Follow the example given.'
+_instr = 'Answer the question below. An example question and answer are provided.'
 _ex_question = 'Alice buys 3 pizzas for $10 each. How much did she spend in total?'
 
 # gsm50 version
