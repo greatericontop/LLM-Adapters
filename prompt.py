@@ -1,12 +1,12 @@
 
 #_instr = 'Below is an instruction that describes a question. Write a response that appropriately completes the question. Your response must end with your final answer. Follow the example given.'
 _instr = 'Answer the question below. An example question and answer are provided.'
-_ex_question = 'Alice buys 3 pizzas for $10 each. How much did she spend in total?'
+_ex_question = 'Alice buys 3 pizzas for $10 each and 2 donuts for $2 each. How much did she spend in total?'
 
 # gsm50 version
 #_ex_answer = ''
 # math10k version
-_ex_answer = 'Alice buys 3 pizzas. Each one costs $10, so the total cost is 3 * 10 = 30. The answer is 30.'
+_ex_answer = 'Alice buys 3 pizzas. Each one costs $10, so the total cost of pizzas is 3 * 10 = 30. Alice buys 2 donuts. Each one costs $2, so the total cost of donuts is 2 * 2 = 4. The total cost is 30 + 4 = 34. The answer is 34.'
 
 
 def get_eval_prompt(instruction: str) -> str:
