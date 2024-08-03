@@ -28,12 +28,7 @@ except:  # noqa: E722
     pass
 
 
-def main(
-        load_8bit: bool = False,
-        base_model: str = "",
-        lora_weights: str = "tloen/alpaca-lora-7b",
-        share_gradio: bool = False,
-):
+def main():
     args = parse_args()
 
     def evaluate(
@@ -87,7 +82,7 @@ def main(
         print("Response:", evaluate(instruction))
         print()
     """
-    save_file = f'experiment/{args.model}-{args.adapter}-{args.dataset}.json'
+    save_file = f'experiment/{args.model_tokenizer}-{args.adapter}-{args.dataset}.json'
     create_dir('experiment/')
 
     dataset = load_data(args)
@@ -196,7 +191,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', choices=['AddSub', 'MultiArith', 'SingleEq', 'gsm8k', 'AQuA', 'SVAMP', 'apchem', 'gsm50', 'math50'],
                         required=True)
-    parser.add_argument('--model', choices=['LLaMA-7B', 'BLOOM-7B', 'GPT-j-6B'], required=True)
+    parser.add_argument('--model_tokenizer', choices=['LLaMA-7B', 'BLOOM-7B', 'GPT-j-6B'], required=True)
     parser.add_argument('--adapter', choices=['LoRA', 'AdapterP', 'AdapterH', 'Parallel', 'Prefix'],
                         required=True)
     parser.add_argument('--base_model', required=True)
@@ -217,13 +212,13 @@ def load_model(args) -> tuple:
     """
     base_model = args.base_model
     if not base_model:
-        raise ValueError(f'can not find base model name by the value: {args.model}')
+        raise ValueError(f'can not find base model name by the value: {args.base_model}')
     lora_weights = args.lora_weights
     if not lora_weights:
         raise ValueError(f'can not find lora weight, the value is: {lora_weights}')
 
     load_8bit = args.load_8bit
-    if args.model == 'LLaMA-7B':
+    if args.model_tokenizer == 'LLaMA-7B':
         tokenizer = LlamaTokenizer.from_pretrained(base_model)
     else:
         tokenizer = AutoTokenizer.from_pretrained(base_model)
