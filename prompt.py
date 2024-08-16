@@ -1,7 +1,7 @@
 
 #_instr = 'Below is an instruction that describes a question. Write a response that appropriately completes the question. Your response must end with your final answer. Follow the example given.'
 
-_instr = 'Answer the question below. Your response must end with your final answer. An example question and answer are provided.'
+_instr = 'Answer the question below. Make sure to explain your reasoning while also being concise if possible. An example question and answer are provided.'
 _ex_question = 'Alice buys 3 pizzas for $10 each and 2 donuts for $2 each. How much did she spend in total?'
 
 # gsm50 version
