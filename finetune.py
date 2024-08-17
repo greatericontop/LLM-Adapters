@@ -31,6 +31,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaTokenizer, Au
 def train(
         # model/data params
         base_model: str = "",  # the only required argument
+        use_llama_tokenizer: bool = False,
         data_path: str = "yahma/alpaca-cleaned",
         output_dir: str = "./lora-alpaca",
         adapter_name: str = "lora",
@@ -73,6 +74,7 @@ def train(
     print(
         f"Finetuning model with params:\n"
         f"base_model: {base_model}\n"
+        f"use_llama_tokenizer: {use_llama_tokenizer}\n"
         f"data_path: {data_path}\n"
         f"output_dir: {output_dir}\n"
         f"batch_size: {batch_size}\n"
@@ -143,7 +145,7 @@ def train(
             trust_remote_code=True,
         )
 
-    if model.config.model_type == "llama":
+    if use_llama_tokenizer:
         # Due to the name of transformers' LlamaTokenizer, we have to do this
         tokenizer = LlamaTokenizer.from_pretrained(base_model)
     else:
