@@ -86,6 +86,9 @@ def main():
     save_file = f'experiment/{args.model_tokenizer}-{args.adapter}-{args.dataset}.json'
     create_dir('experiment/')
 
+    max_new_tokens = args.max_new_tokens
+    print(f'        -> max_new_tokens: {max_new_tokens}')
+
     dataset = load_data(args)
     tokenizer, model = load_model(args)
     total = len(dataset)
@@ -97,7 +100,7 @@ def main():
         instruction = data.get('instruction')
         input_ = data.get('input')
 
-        outputs = evaluate(instruction, input_)
+        outputs = evaluate(instruction, input_, max_new_tokens=max_new_tokens)
         label = data.get('answer')
         flag = False
         if args.dataset.lower() in ['aqua', 'apchem']:  # apchem
@@ -198,6 +201,7 @@ def parse_args():
     parser.add_argument('--base_model', required=True)
     parser.add_argument('--lora_weights', required=True)
     parser.add_argument('--load_8bit', action='store_true', default=False)
+    parser.add_argument('--max_new_tokens', type=int, required=True)
 
     return parser.parse_args()
 
