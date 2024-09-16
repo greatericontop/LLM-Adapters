@@ -66,10 +66,8 @@ def main():
             )
         s = generation_output.sequences[0]
         raw_output: str = tokenizer.decode(s)
-        partitioned_output: tuple[str] = raw_output.partition(prompt)
-        if partitioned_output[1] == '' and partitioned_output[2] == '':  # the text of the prompt not found
-            raise RuntimeError("The output should contain the prompt at the start, but it wasn't found")
-        trimmed_output = partitioned_output[2].strip()
+        partitioned_output: tuple[str] = raw_output.split('<|start_header_id|>assistant<|end_header_id|>')
+        trimmed_output = partitioned_output[-1].strip()
         return trimmed_output
 
     """
