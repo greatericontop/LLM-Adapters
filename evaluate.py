@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import copy
 import json
 import os
@@ -63,8 +65,12 @@ def main():
                 use_cache=False,
             )
         s = generation_output.sequences[0]
-        output = tokenizer.decode(s)
-        return output.strip()
+        raw_output: str = tokenizer.decode(s)
+        partitioned_output: tuple[str] = raw_output.partition(prompt)
+        if partitioned_output[1] == '' and partitioned_output[2] == '':  # the text of the prompt not found
+            raise RuntimeError("The output should contain the prompt at the start, but it wasn't found")
+        trimmed_output = partitioned_output[2].strip()
+        return trimmed_output
 
     """
     # testing code for readme
