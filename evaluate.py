@@ -66,8 +66,8 @@ def main():
             )
         s = generation_output.sequences[0]
         raw_output: str = tokenizer.decode(s)
-        partitioned_output: tuple[str] = raw_output.split('<|start_header_id|>assistant<|end_header_id|>')
-        trimmed_output = partitioned_output[-1].strip()
+        # Only consider everything before the first <|end_of_text|>, and only the last assistant block before that
+        trimmed_output: str = raw_output.partition('<|end_of_text|>')[0].split('<|start_header_id|>assistant<|end_header_id|>')[-1]
         return trimmed_output
 
     """
