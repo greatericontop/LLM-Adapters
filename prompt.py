@@ -2,7 +2,7 @@
 #_instr = 'Below is an instruction that describes a question. Write a response that appropriately completes the question. Your response must end with your final answer. Follow the example given.'
 #_instr = 'Answer the question below. Make sure to explain your reasoning. An example question and answer are provided.'
 #_instr = 'Answer the questions given by the user. Make sure to explain your reasoning.'
-_instr = 'Answer the question below. Make sure to explain your reasoning. Some example questions and answers are provided.'
+_instr = 'Answer the question below. Make sure to explain your reasoning. Some example questions and answers are provided. SUPER IMPORTANT: Your response must end with "The answer is X", where X is your answer.'
 #_ex_question = 'Alice buys 3 pizzas for $10 each and 2 donuts for $2 each. How much did she spend in total?'
 
 # gsm50 version
