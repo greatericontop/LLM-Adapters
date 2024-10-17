@@ -43,9 +43,7 @@ To find 40% of 30, we can multiply 30 by 0.4:
 Therefore, 40% of the number of students who entered the bus at the intermediate stop is 12.'''
 ]
 
-
-def get_eval_prompt(instruction: str) -> str:
-    return f'''
+llama3_eval_propmt = f'''
 <|begin_of_text|><|start_header_id|>system<|end_header_id|>
 {_instr}
 <|eot_id|>
@@ -73,9 +71,7 @@ def get_eval_prompt(instruction: str) -> str:
 <|start_header_id|>assistant<|end_header_id|>
 '''
 
-
-def get_finetune_prompt(instruction: str, output: str) -> str:
-    return f'''
+llama3_finetune_prompt = f'''
 <|begin_of_text|><|start_header_id|>system<|end_header_id|>
 {_instr}
 <|eot_id|>
@@ -104,3 +100,29 @@ def get_finetune_prompt(instruction: str, output: str) -> str:
 {output}
 <|eot_id|><|end_of_text|>
 '''
+
+
+
+def get_eval_prompt(instruction: str) -> str:
+    return f'''Answer the question below. Make sure to explain your reasoning, but be concise in your explanations since there is a word limit. SUPER IMPORTANT: Your response must end with "The answer is X", where X is your answer.
+
+### Instruction:
+{instruction}
+
+### Response:
+'''
+
+    #return llama3_eval_propmt
+
+
+def get_finetune_prompt(instruction: str, output: str) -> str:
+    return f'''Answer the question below. Make sure to explain your reasoning, but be concise in your explanations since there is a word limit. SUPER IMPORTANT: Your response must end with "The answer is X", where X is your answer.
+
+### Instruction:
+{instruction}
+
+### Response:
+{output}
+'''
+
+    #return llama3_finetune_prompt
