@@ -43,63 +43,63 @@ To find 40% of 30, we can multiply 30 by 0.4:
 Therefore, 40% of the number of students who entered the bus at the intermediate stop is 12.'''
 ]
 
-llama3_eval_propmt = f'''
-<|begin_of_text|><|start_header_id|>system<|end_header_id|>
-{_instr}
-<|eot_id|>
-<|start_header_id|>user<|end_header_id|>
-{_examples[0]}
-<|eot_id|>
-<|start_header_id|>assistant<|end_header_id|>
-{_examples[1]}
-<|eot_id|>
-<|start_header_id|>user<|end_header_id|>
-{_examples[2]}
-<|eot_id|>
-<|start_header_id|>assistant<|end_header_id|>
-{_examples[3]}
-<|eot_id|>
-<|start_header_id|>user<|end_header_id|>
-{_examples[4]}
-<|eot_id|>
-<|start_header_id|>assistant<|end_header_id|>
-{_examples[5]}
-<|eot_id|>
-<|start_header_id|>user<|end_header_id|>
-{instruction}
-<|eot_id|>
-<|start_header_id|>assistant<|end_header_id|>
-'''
-
-llama3_finetune_prompt = f'''
-<|begin_of_text|><|start_header_id|>system<|end_header_id|>
-{_instr}
-<|eot_id|>
-<|start_header_id|>user<|end_header_id|>
-{_examples[0]}
-<|eot_id|>
-<|start_header_id|>assistant<|end_header_id|>
-{_examples[1]}
-<|eot_id|>
-<|start_header_id|>user<|end_header_id|>
-{_examples[2]}
-<|eot_id|>
-<|start_header_id|>assistant<|end_header_id|>
-{_examples[3]}
-<|eot_id|>
-<|start_header_id|>user<|end_header_id|>
-{_examples[4]}
-<|eot_id|>
-<|start_header_id|>assistant<|end_header_id|>
-{_examples[5]}
-<|eot_id|>
-<|start_header_id|>user<|end_header_id|>
-{instruction}
-<|eot_id|>
-<|start_header_id|>assistant<|end_header_id|>
-{output}
-<|eot_id|><|end_of_text|>
-'''
+# llama3_eval_propmt = f'''
+# <|begin_of_text|><|start_header_id|>system<|end_header_id|>
+# {_instr}
+# <|eot_id|>
+# <|start_header_id|>user<|end_header_id|>
+# {_examples[0]}
+# <|eot_id|>
+# <|start_header_id|>assistant<|end_header_id|>
+# {_examples[1]}
+# <|eot_id|>
+# <|start_header_id|>user<|end_header_id|>
+# {_examples[2]}
+# <|eot_id|>
+# <|start_header_id|>assistant<|end_header_id|>
+# {_examples[3]}
+# <|eot_id|>
+# <|start_header_id|>user<|end_header_id|>
+# {_examples[4]}
+# <|eot_id|>
+# <|start_header_id|>assistant<|end_header_id|>
+# {_examples[5]}
+# <|eot_id|>
+# <|start_header_id|>user<|end_header_id|>
+# {instruction}
+# <|eot_id|>
+# <|start_header_id|>assistant<|end_header_id|>
+# '''
+#
+# llama3_finetune_prompt = f'''
+# <|begin_of_text|><|start_header_id|>system<|end_header_id|>
+# {_instr}
+# <|eot_id|>
+# <|start_header_id|>user<|end_header_id|>
+# {_examples[0]}
+# <|eot_id|>
+# <|start_header_id|>assistant<|end_header_id|>
+# {_examples[1]}
+# <|eot_id|>
+# <|start_header_id|>user<|end_header_id|>
+# {_examples[2]}
+# <|eot_id|>
+# <|start_header_id|>assistant<|end_header_id|>
+# {_examples[3]}
+# <|eot_id|>
+# <|start_header_id|>user<|end_header_id|>
+# {_examples[4]}
+# <|eot_id|>
+# <|start_header_id|>assistant<|end_header_id|>
+# {_examples[5]}
+# <|eot_id|>
+# <|start_header_id|>user<|end_header_id|>
+# {instruction}
+# <|eot_id|>
+# <|start_header_id|>assistant<|end_header_id|>
+# {output}
+# <|eot_id|><|end_of_text|>
+# '''
 
 
 
