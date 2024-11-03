@@ -87,6 +87,7 @@ def main():
         print()
     """
     save_file = f'experiment/{args.model_tokenizer}-{args.adapter}-{args.dataset}.json'
+    save_file_wrong_answer = f'experiment/latest-eval-wrong-answers.json'
     create_dir('experiment/')
 
     max_new_tokens = args.max_new_tokens
@@ -98,6 +99,7 @@ def main():
     correct = 0
     miss = 0.001
     output_data = []
+    wrong_answer_data = []
     pbar = tqdm(total=total)
     for idx, data in enumerate(dataset):
         instruction = data.get('instruction')
@@ -123,6 +125,8 @@ def main():
         new_data['pred'] = predict
         new_data['flag'] = flag
         output_data.append(new_data)
+        if not flag:
+            wrong_answer_data.append({'instruction': instruction, 'output': outputs, 'answer_correct': label, 'answer_given': predict})
         print('\n')
         print('\033[0;35m---------------\033[0;0m')
         print(f'\033[0;37m{instruction}\033[0;0m\n')
@@ -133,6 +137,8 @@ def main():
         print(f'\rtest:{idx + 1}/{total} | accuracy {correct}  {correct / (idx + 1)}')
         with open(save_file, 'w+') as f:
             json.dump(output_data, f, indent=4)
+        with open(save_file_wrong_answer, 'w+') as f:
+            json.dump(wrong_answer_data, f, indent=4)
         pbar.update(1)
     pbar.close()
     print('\n')
