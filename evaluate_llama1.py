@@ -296,7 +296,7 @@ def load_instruction(args) -> str:
 
 def extract_answer_number(args, sentence: str) -> float:
     dataset = args.dataset.lower()
-    if dataset in ["multiarith", "addsub", "singleeq", "gsm8k", "svamp", "gsm50", "math50"]:  # gsm50, math50
+    if dataset in ["multiarith", "addsub", "singleeq", "gsm8k", "svamp", "gsm50", "math50", "math10ktraintest"]:  # gsm50, math50, math10ktraintest
         sentence = sentence.replace(',', '')
         pred = [s for s in re.findall(r'-?\d+\.?\d*', sentence)]
         if not pred:
