@@ -69,23 +69,7 @@ def main():
         trimmed_output: str = raw_output.split("### Response:")[1].strip()
         return trimmed_output
 
-    """
-    # testing code for readme
-    for instruction in [
-        "Tell me about alpacas.",
-        "Tell me about the president of Mexico in 2019.",
-        "Tell me about the king of France in 2019.",
-        "List all Canadian provinces in alphabetical order.",
-        "Write a Python program that prints the first 10 Fibonacci numbers.",
-        "Write a program that prints the numbers from 1 to 100. But for multiples of three print 'Fizz' instead of the number and for the multiples of five print 'Buzz'. For numbers which are multiples of both three and five print 'FizzBuzz'.",  # noqa: E501
-        "Tell me five words that rhyme with 'shock'.",
-        "Translate the sentence 'I have no mouth but I must scream' into Spanish.",
-        "Count up from 1 to 500.",
-    ]:
-        print("Instruction:", instruction)
-        print("Response:", evaluate(instruction))
-        print()
-    """
+
     save_file = f'experiment/{args.model_tokenizer}-{args.adapter}-{args.dataset}.json'
     save_file_wrong_answer = f'experiment/latest-eval-wrong-answers.json'
     create_dir('experiment/')
@@ -153,35 +137,6 @@ def create_dir(dir_path):
 
 def generate_prompt(instruction):
     return prompt.get_eval_prompt(instruction)
-    # return f"""Below is an instruction that describes a question, paired with the answer choices that you can select. Write a response that appropriately completes the question. Your response must end with "Therefore, the correct answer is LETTER", with the letter A, B, C, or D, indicating your final answer choice.
-    #
-    #            ### Instruction:
-    #            {instruction}
-    #
-    #            ### Answer Choices:
-    #            {input}
-    #
-    #            ### Response:
-    #            """  # noqa: E501
-    # if input:
-    #     return f"""Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
-    #
-    #             ### Instruction:
-    #             {instruction}
-    #
-    #             ### Input:
-    #             {input}
-    #
-    #             ### Response:
-    #             """  # noqa: E501
-    # else:
-    #     return f"""Below is an instruction that describes a task. Write a response that appropriately completes the request.
-    #
-    #             ### Instruction:
-    #             {instruction}
-    #
-    #             ### Response:
-    #             """  # noqa: E501
 
 
 def load_data(args) -> list:
