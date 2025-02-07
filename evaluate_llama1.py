@@ -120,7 +120,7 @@ def main():
             print(outputs)
         else:
             partitioned = outputs.partition(string_to_cut_off_response)
-            print(f'{partitioned[0]}\033[0;90m{partitioned[1]}{partitioned[2]}\033[0;0m]')
+            print(f'{partitioned[0]}\033[0;90m{partitioned[1]}{partitioned[2]}\033[0;0m')
         print(f'\033[0;36mprediction: {predict}\033[0;0m')
         print(f'\033[0;36mcorrect: {label}\033[0;0m')
         print('\033[0;35m---------------\033[0;0m')
