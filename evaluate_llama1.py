@@ -116,7 +116,11 @@ def main():
         print('\n')
         print('\033[0;35m---------------\033[0;0m')
         print(f'\033[0;37m{instruction}\033[0;0m\n')
-        print(outputs)
+        if string_to_cut_off_response is None:
+            print(outputs)
+        else:
+            partitioned = outputs.partition(string_to_cut_off_response)
+            print(f'{partitioned[0]}\033[90;0m{partitioned[1]}{partitioned[2]}\033[0;0m]')
         print(f'\033[0;36mprediction: {predict}\033[0;0m')
         print(f'\033[0;36mcorrect: {label}\033[0;0m')
         print('\033[0;35m---------------\033[0;0m')
@@ -258,7 +262,7 @@ def extract_answer_number(args, sentence: str, string_to_cut_off_response: str) 
     if dataset in ["multiarith", "addsub", "singleeq", "gsm8k", "svamp", "gsm50", "math50", "math10ktraintest"]:  # gsm50, math50, math10ktraintest
         sentence = sentence.replace(',', '')
         if string_to_cut_off_response:
-            sentence = sentence.split(string_to_cut_off_response)[0]
+            sentence = sentence.partition(string_to_cut_off_response)[0]
         pred = [s for s in re.findall(r'-?\d+\.?\d*', sentence)]
         if not pred:
             return float('inf')
@@ -276,7 +280,7 @@ def extract_answer_number(args, sentence: str, string_to_cut_off_response: str) 
 def extract_answer_letter(args, sentence: str, string_to_cut_off_response: str) -> str:
     sentence_ = sentence.strip()
     if string_to_cut_off_response:
-        sentence_ = sentence_.split(string_to_cut_off_response)[0]
+        sentence_ = sentence_.partition(string_to_cut_off_response)[0]
     # Yes-overlapping matches for [startline/whitespace/punctuation][letter][endline/whitespace/punctuation]
     pred_answers = re.findall(r'(?=(^|\.|,|;| )([ABCDE])($|\.|,|;| ))', sentence_)
     #pred_answers = re.findall(r'A|B|C|D|E', sentence_)
