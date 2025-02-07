@@ -76,6 +76,8 @@ def main():
 
     max_new_tokens = args.max_new_tokens
     print(f'        -> max_new_tokens: {max_new_tokens}')
+    string_to_cut_off_response = args.string_to_cut_off_response
+    print(f'        -> string_to_cut_off_response: {string_to_cut_off_response}')
 
     dataset = load_data(args)
     tokenizer, model = load_model(args)
@@ -93,14 +95,14 @@ def main():
         label = data.get('answer')
         flag = False
         if args.dataset.lower() in ['aqua', 'apchem']:  # apchem
-            predict = extract_answer_letter(args, outputs)
+            predict = extract_answer_letter(args, outputs, string_to_cut_off_response)
             if label == predict:
                 correct += 1
                 flag = True
         else:
             if isinstance(label, str):
                 label = float(label)
-            predict = extract_answer_number(args, outputs)
+            predict = extract_answer_number(args, outputs, string_to_cut_off_response)
             if abs(label - predict) <= miss:
                 correct += 1
                 flag = True
@@ -165,7 +167,9 @@ def parse_args():
     parser.add_argument('--base_model', required=True)
     parser.add_argument('--lora_weights', required=True)
     parser.add_argument('--load_8bit', action='store_true', default=False)
+
     parser.add_argument('--max_new_tokens', type=int, required=True)
+    parser.add_argument('--string_to_cut_off_response', type=str, default=None)
 
     return parser.parse_args()
 
@@ -249,10 +253,12 @@ def load_instruction(args) -> str:
     return instruction
 
 
-def extract_answer_number(args, sentence: str) -> float:
+def extract_answer_number(args, sentence: str, string_to_cut_off_response: str) -> float:
     dataset = args.dataset.lower()
     if dataset in ["multiarith", "addsub", "singleeq", "gsm8k", "svamp", "gsm50", "math50", "math10ktraintest"]:  # gsm50, math50, math10ktraintest
         sentence = sentence.replace(',', '')
+        if string_to_cut_off_response:
+            sentence = sentence.split(string_to_cut_off_response)[0]
         pred = [s for s in re.findall(r'-?\d+\.?\d*', sentence)]
         if not pred:
             return float('inf')
@@ -267,8 +273,10 @@ def extract_answer_number(args, sentence: str) -> float:
     return pred_answer
 
 
-def extract_answer_letter(args, sentence: str) -> str:
+def extract_answer_letter(args, sentence: str, string_to_cut_off_response: str) -> str:
     sentence_ = sentence.strip()
+    if string_to_cut_off_response:
+        sentence_ = sentence_.split(string_to_cut_off_response)[0]
     # Yes-overlapping matches for [startline/whitespace/punctuation][letter][endline/whitespace/punctuation]
     pred_answers = re.findall(r'(?=(^|\.|,|;| )([ABCDE])($|\.|,|;| ))', sentence_)
     #pred_answers = re.findall(r'A|B|C|D|E', sentence_)
