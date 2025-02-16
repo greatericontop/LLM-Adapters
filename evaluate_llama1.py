@@ -71,13 +71,14 @@ def main():
 
 
     save_file = f'experiment/{args.model_tokenizer}-{args.adapter}-{args.dataset}.json'
-    save_file_wrong_answer = f'experiment/latest-eval-wrong-answers.json'
     create_dir('experiment/')
 
     max_new_tokens = args.max_new_tokens
     print(f'        -> max_new_tokens: {max_new_tokens}')
     string_to_cut_off_response = args.string_to_cut_off_response
     print(f'        -> string_to_cut_off_response: {string_to_cut_off_response}')
+    wrong_answers_filename = args.wrong_answers_filename
+    print(f'        -> wrong_answers_filename: {wrong_answers_filename}')
 
     dataset = load_data(args)
     tokenizer, model = load_model(args)
@@ -111,24 +112,33 @@ def main():
         new_data['pred'] = predict
         new_data['flag'] = flag
         output_data.append(new_data)
-        if not flag:
-            wrong_answer_data.append({'instruction': instruction, 'output': outputs, 'answer_correct': label, 'answer_given': predict})
         print('\n')
         print('\033[0;35m---------------\033[0;0m')
         print(f'\033[0;37m{instruction}\033[0;0m\n')
         if string_to_cut_off_response is None:
             print(outputs)
+            if not flag:
+                wrong_answer_data.append({'instruction': instruction, 'output': outputs, 'answer_correct': label, 'answer_given': predict})
         else:
             partitioned = outputs.partition(string_to_cut_off_response)
             print(f'{partitioned[0]}\033[0;90m{partitioned[1]}{partitioned[2]}\033[0;0m')
+            if not flag:
+                wrong_answer_data.append({'instruction': instruction, 'output': partitioned[0], 'answer_correct': label, 'answer_given': predict})
         print(f'\033[0;36mprediction: {predict}\033[0;0m')
         print(f'\033[0;36mcorrect: {label}\033[0;0m')
         print('\033[0;35m---------------\033[0;0m')
         print(f'\rtest:{idx + 1}/{total} | accuracy {correct}  {correct / (idx + 1)}')
         with open(save_file, 'w+') as f:
             json.dump(output_data, f, indent=4)
-        with open(save_file_wrong_answer, 'w+') as f:
+        with open(wrong_answers_filename, 'w+') as f:
             json.dump(wrong_answer_data, f, indent=4)
+        # checkpoints/backups
+        if idx % 1000 == 0:
+            with open(f'{wrong_answers_filename}.checkpoint1000', 'w+') as f:
+                json.dump(wrong_answer_data, f, indent=4)
+        elif idx % 200 == 0:
+            with open(f'{wrong_answers_filename}.checkpoint200', 'w+') as f:
+                json.dump(wrong_answer_data, f, indent=4)
         pbar.update(1)
     pbar.close()
     print('\n')
@@ -174,6 +184,7 @@ def parse_args():
 
     parser.add_argument('--max_new_tokens', type=int, required=True)
     parser.add_argument('--string_to_cut_off_response', type=str, default=None)
+    parser.add_argument('--wrong_answers_filename', type=str, default='experiments/latest-wrong-answers.json')
 
     return parser.parse_args()
 
