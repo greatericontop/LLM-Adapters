@@ -184,7 +184,7 @@ def parse_args():
 
     parser.add_argument('--max_new_tokens', type=int, required=True)
     parser.add_argument('--string_to_cut_off_response', type=str, default=None)
-    parser.add_argument('--wrong_answers_filename', type=str, default='experiments/latest-wrong-answers.json')
+    parser.add_argument('--wrong_answers_filename', type=str, default='experiment/latest-wrong-answers.json')
 
     return parser.parse_args()
 
