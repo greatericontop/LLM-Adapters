@@ -274,10 +274,10 @@ def extract_answer_number(args, sentence: str, string_to_cut_off_response: str) 
         sentence = sentence.replace(',', '')
         if string_to_cut_off_response:
             sentence = sentence.partition(string_to_cut_off_response)[0]
-        pred = [s for s in re.findall(r'[^A-Za-z](-?\d+\.?\d*)', sentence)]
+        pred = [s for s in re.findall(r'[^0-9A-Za-z](-?[0-9,]+\.?[0-9,]*)', sentence)]
         if not pred:
             return float('inf')
-        pred_answer = float(pred[-1])
+        pred_answer = float(pred[-1].replace(',', ''))
     else:
         raise NotImplementedError(' not support dataset: {}'.format(dataset))
     if isinstance(pred_answer, str):
