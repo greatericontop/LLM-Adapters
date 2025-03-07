@@ -99,8 +99,11 @@ def main():
     pbar = tqdm(total=total)
     for i, data in enumerate(dataset):
         if args.dataset_path == 'mathtest.json':
-            prompt = (f'Answer the following question. End your answer with the statement, "The answer is (your answer)."\n'
-                      f'{data["question"]}')
+            prompt = (f'<|begin_of_text|><|start_header_id|>system<|end_header_id|>]\n'
+                      f'Answer the following question. End your answer with the statement, "The answer is (your answer)."\n'
+                      f'<|eot_id|><|start_header_id|>user<|end_header_id|>\n'
+                      f'{data["question"]}\n'
+                      f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>')
             outputs = evaluate(prompt, max_new_tokens=max_new_tokens)
             print(f'------------------------------------\n'
                   f'{prompt}\n'
