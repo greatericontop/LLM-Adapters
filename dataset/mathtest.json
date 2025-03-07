@@ -6,5 +6,9 @@
   {
     "question": "If I am 10 years old and my brother is 5 years old, how old will my brother be when I am 20 years old?",
     "correct": 15
+  },
+  {
+    "question": "How many ways can you arrange the letters in the word 'MATH'?",
+    "correct": 24
   }
 ]

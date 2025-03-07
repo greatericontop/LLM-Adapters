@@ -104,12 +104,14 @@ def main():
                       f'<|eot_id|><|start_header_id|>user<|end_header_id|>\n'
                       f'{data["question"]}\n'
                       f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>')
-            outputs = evaluate(prompt, max_new_tokens=max_new_tokens)
-            print(f'\033[0;35m------------------------------------\033[0;0m\n'
-                  f'\033[0;37m{prompt}\033[0;0m\n'
-                  f'\033[0;35m-----\033[0;0m\n'
-                  f'{outputs}\n'
-                  f'\033[0;35m------------------------------------\033[0;0m\n')
+            output = evaluate(prompt, max_new_tokens=max_new_tokens)
+            output = output.partition('<|start_header_id|>assistant<|end_header_id|>')[2]
+            print(f'\033[35m------------------------------------\033[0m\n'
+                  f'\033[37m{prompt}\033[0m\n'
+                  f'\033[35m-----\033[0m\n'
+                  f'{output}\n'
+                  f'\033[35;1mcorrect answer: {data["correct"]}\033[0m\n'
+                  f'\033[35m------------------------------------\033[0m\n')
 
         pbar.update(1)
     pbar.close()
