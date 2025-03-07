@@ -97,6 +97,7 @@ def main():
     total = len(dataset)
     output_data = []
     pbar = tqdm(total=total)
+    print('\033[35;1mStarting...\033[0m\n')
     for i, data in enumerate(dataset):
         if args.dataset_path == 'mathtest.json':
             prompt = (f'<|begin_of_text|><|start_header_id|>system<|end_header_id|>]\n'
