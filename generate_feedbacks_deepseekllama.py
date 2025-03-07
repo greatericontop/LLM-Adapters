@@ -105,11 +105,11 @@ def main():
                       f'{data["question"]}\n'
                       f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>')
             outputs = evaluate(prompt, max_new_tokens=max_new_tokens)
-            print(f'------------------------------------\n'
-                  f'{prompt}\n'
-                  f'-----\n'
+            print(f'\033[0;35m------------------------------------\033[0;0m\n'
+                  f'\033[0;37m{prompt}\033[0;0m\n'
+                  f'\033[0;35m-----\033[0;0m\n'
                   f'{outputs}\n'
-                  f'------------------------------------\n')
+                  f'\033[0;35m------------------------------------\033[0;0m\n')
 
         pbar.update(1)
     pbar.close()
