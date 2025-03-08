@@ -36,7 +36,7 @@ def main():
 
     def evaluate(
             prompt,
-            temperature=0.3,
+            temperature=0.5,
             #temperature=0.1,
             top_p=0.75,
             top_k=40,
@@ -105,7 +105,7 @@ def main():
                       f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n'
                       f'<think>\n')
             output = evaluate(prompt, max_new_tokens=max_new_tokens)
-            output = output.partition('<|start_header_id|>assistant<|end_header_id|>')[2]
+            output = output.partition('<think>\n')[2]
             output = output.partition('</think>')[0]
             print(f'\033[35m------------------------------------\033[0m\n'
                   f'\033[37m{prompt}\033[0m\n'
