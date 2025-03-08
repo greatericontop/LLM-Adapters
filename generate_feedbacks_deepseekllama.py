@@ -36,13 +36,11 @@ def main():
 
     def evaluate(
             prompt,
-            temperature=0.1,
+            temperature=0.3,
+            #temperature=0.1,
             top_p=0.75,
             top_k=40,
             num_beams=4,
-            #max_new_tokens=704,
-            #max_new_tokens=175,
-            max_new_tokens=192,
             **kwargs,
     ):
         inputs = tokenizer(prompt, return_tensors="pt")
