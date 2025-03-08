@@ -100,11 +100,12 @@ def main():
     print('\033[35;1mStarting...\033[0m\n')
     for i, data in enumerate(dataset):
         if args.dataset_path == 'mathtest.json':
-            prompt = (f'<|begin_of_text|><|start_header_id|>system<|end_header_id|>]\n'
+            prompt = (f'<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n'
                       f'Answer the following question. End your answer with the statement, "The answer is (your answer)."\n'
-                      f'<|eot_id|><|start_header_id|>user<|end_header_id|>\n'
+                      f'<|eot_id|>\n'
                       f'{data["question"]}\n'
-                      f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>')
+                      f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n'
+                      f'<think>\n')
             output = evaluate(prompt, max_new_tokens=max_new_tokens)
             output = output.partition('<|start_header_id|>assistant<|end_header_id|>')[2]
             print(f'\033[35m------------------------------------\033[0m\n'
