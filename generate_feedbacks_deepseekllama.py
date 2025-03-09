@@ -119,10 +119,20 @@ def main():
                       f'What\'s wrong with this student\'s answer to the following question? Please explain the student\'s mistake clearly."\n'
                       f'Original Question:\n'
                       f'{data["instruction"]}\n'
-                      f'Student\'s Reasoning:\n'
+                      f'Correct Answer: {data["answer_correct"]}\n'
+                      f'Student\'s Answer:\n'
                       f'{data["output"]}\n'
+                      f'(The student\'s final answer was {data["answer_given"]})\n'
                       f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n'
                       f'<think>\n')
+            output = evaluate(prompt, max_new_tokens=max_new_tokens)
+            output = output.partition('<think>\n')[2]
+            output = output.partition('</think>')[0]
+            print(f'\033[35m------------------------------------\033[0m\n'
+                  f'\033[37m{prompt}\033[0m\n'
+                  f'\033[35m-----\033[0m\n'
+                  f'{output}\n'
+                  f'\033[35m------------------------------------\033[0m\n')
 
         pbar.update(1)
     pbar.close()
