@@ -97,10 +97,10 @@ def main():
     pbar = tqdm(total=total)
     print('\033[35;1mStarting...\033[0m\n')
     for i, data in enumerate(dataset):
+
         if args.dataset_path == 'mathtest.json':
             prompt = (f'<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n'
                       f'Answer the following question. End your answer with the statement, "The answer is (your answer)."\n'
-                      f'<|eot_id|>\n'
                       f'{data["question"]}\n'
                       f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n'
                       f'<think>\n')
@@ -113,6 +113,16 @@ def main():
                   f'{output}\n'
                   f'\033[35;1mcorrect answer: {data["correct"]}\033[0m\n'
                   f'\033[35m------------------------------------\033[0m\n')
+
+        elif args.dataset_path == 'badmathtest.json':
+            prompt = (f'<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n'
+                      f'What\'s wrong with this student\'s answer to the following question? Please explain the student\'s mistake clearly."\n'
+                      f'Original Question:\n'
+                      f'{data["instruction"]}\n'
+                      f'Student\'s Reasoning:\n'
+                      f'{data["output"]}\n'
+                      f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n'
+                      f'<think>\n')
 
         pbar.update(1)
     pbar.close()
