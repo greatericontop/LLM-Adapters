@@ -1,6 +1,7 @@
 [
   {
     "instruction": " A painter needed to paint 11 rooms in a building. Each room takes 7 hours to paint. If he already painted 2 rooms, how much longer will he take to paint the rest? \n ",
+    "output_correct": "Step 1: Find out how many rooms are left to paint.\\n11 total rooms - 2 rooms already painted = 9 rooms left to paint\\n\\nStep 2: Multiply the number of rooms left to paint by the time it takes to paint each room.\\n9 rooms left to paint x 7 hours per room = 63 hours left to paint\\n\\nTherefore, the painter will take 63 more hours to paint the rest of the rooms. The answer in Arabic numerals is 63.",
     "output": "1. Find the total number of rooms the painter needs to paint: 11 rooms\n2. Find the number of rooms the painter has already painted: 2 rooms\n3. Find the number of rooms the painter still needs to paint: 11 rooms - 2 rooms = 9 rooms\n4. Find the total time the painter needs to paint all the rooms: 9 rooms x 7 hours per room = 63 hours\n5. Find the time the painter has already spent painting: 2 rooms x 7 hours per room = 14 hours\n6. Find the time the painter still needs to spend painting: 63 hours - 14 hours = 49 hours\n\nTherefore, the painter will take 49 more hours to paint the rest of the rooms. The answer in Arabic numerals is 49.\n",
     "answer_correct": 63.0,
     "answer_given": 49.0
