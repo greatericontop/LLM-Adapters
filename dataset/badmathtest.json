@@ -1,5 +1,23 @@
 [
   {
+    "instruction": "Gina's snake eats one mouse every 4 weeks. How many mice will it eat in a decade?\n ",
+    "output": "In a decade, there are 12 months x 4 weeks = <<12*4=48>>48 weeks.\nSo, the snake will eat 48/4 = <<48/4=12>>12 mice in a decade.\nTherefore, Gina's snake will eat 12 mice in a decade. Answer: \\boxed{12}.\n",
+    "answer_correct": 130.0,
+    "answer_given": 12.0
+  },
+  {
+    "instruction": "A judge oversaw seventeen court cases. Two were immediately dismissed from court. Two-thirds of the remaining cases were ruled innocent, one ruling was delayed until a later date, and the rest were judged guilty. On how many cases did the judge rule guilty?\n ",
+    "output": "The number of cases dismissed from court is 2.\nThe number of cases ruled innocent is 2/3 * 17 = 12.\nThe number of cases ruled guilty is 17 - 2 - 12 = 3.\nTherefore, the judge ruled guilty on 3 cases. \n\nAnswer: 3\n",
+    "answer_correct": 4.0,
+    "answer_given": 3.0
+  },
+  {
+    "instruction": "Tommy has a flag that is 5 feet wide and 4 feet tall. He wants to paint it with a new design. He knows from experience that he needs to paint both sides. Paint costs $2 a quart and a quart is good for 4 square feet. How much does he spend on paint?\n ",
+    "output": "1. Calculate the total area of the flag: \n5 feet x 4 feet = 20 square feet \n\n2. Determine how many quarts of paint are needed: \n20 square feet \u00f7 4 square feet/quart = 5 quarts \n\n3. Multiply the number of quarts by the cost per quart: \n5 quarts x $2/quart = $10 \n\nTherefore, Tommy spends $10 on paint.\n",
+    "answer_correct": 20.0,
+    "answer_given": 10.0
+  },
+  {
     "instruction": " A painter needed to paint 11 rooms in a building. Each room takes 7 hours to paint. If he already painted 2 rooms, how much longer will he take to paint the rest? \n ",
     "output_correct": "Step 1: Find out how many rooms are left to paint.\\n11 total rooms - 2 rooms already painted = 9 rooms left to paint\\n\\nStep 2: Multiply the number of rooms left to paint by the time it takes to paint each room.\\n9 rooms left to paint x 7 hours per room = 63 hours left to paint\\n\\nTherefore, the painter will take 63 more hours to paint the rest of the rooms. The answer in Arabic numerals is 63.",
     "output": "1. Find the total number of rooms the painter needs to paint: 11 rooms\n2. Find the number of rooms the painter has already painted: 2 rooms\n3. Find the number of rooms the painter still needs to paint: 11 rooms - 2 rooms = 9 rooms\n4. Find the total time the painter needs to paint all the rooms: 9 rooms x 7 hours per room = 63 hours\n5. Find the time the painter has already spent painting: 2 rooms x 7 hours per room = 14 hours\n6. Find the time the painter still needs to spend painting: 63 hours - 14 hours = 49 hours\n\nTherefore, the painter will take 49 more hours to paint the rest of the rooms. The answer in Arabic numerals is 49.\n",
