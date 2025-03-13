@@ -1,18 +1,21 @@
 [
   {
     "instruction": "Gina's snake eats one mouse every 4 weeks. How many mice will it eat in a decade?\n ",
+    "output_correct": "There are 52 weeks in a year, so in a decade (10 years) there are:\n10 years x 52 weeks/year = 520 weeks\n\nTherefore, the snake will eat:\n520 weeks \u00f7 4 weeks/mouse = 130 mice\n\nSo, Gina's snake will eat 130 mice in a decade. The answer in Arabic numerals is: 130.",
     "output": "In a decade, there are 12 months x 4 weeks = <<12*4=48>>48 weeks.\nSo, the snake will eat 48/4 = <<48/4=12>>12 mice in a decade.\nTherefore, Gina's snake will eat 12 mice in a decade. Answer: \\boxed{12}.\n",
     "answer_correct": 130.0,
     "answer_given": 12.0
   },
   {
     "instruction": "A judge oversaw seventeen court cases. Two were immediately dismissed from court. Two-thirds of the remaining cases were ruled innocent, one ruling was delayed until a later date, and the rest were judged guilty. On how many cases did the judge rule guilty?\n ",
+    "output_correct": "Step 1: Start with the total number of court cases overseen by the judge, which is 17.\nStep 2: Two cases were immediately dismissed, leaving 17 - 2 = 15 cases.\nStep 3: Two-thirds of the remaining cases were ruled innocent, which is (2/3) x 15 = 10 cases.\nStep 4: One ruling was delayed until a later date, leaving 15 - 10 - 1 = 4 cases.\nStep 5: Therefore, the judge ruled guilty on 4 cases.\n\nAnswer: 4.",
     "output": "The number of cases dismissed from court is 2.\nThe number of cases ruled innocent is 2/3 * 17 = 12.\nThe number of cases ruled guilty is 17 - 2 - 12 = 3.\nTherefore, the judge ruled guilty on 3 cases. \n\nAnswer: 3\n",
     "answer_correct": 4.0,
     "answer_given": 3.0
   },
   {
     "instruction": "Tommy has a flag that is 5 feet wide and 4 feet tall. He wants to paint it with a new design. He knows from experience that he needs to paint both sides. Paint costs $2 a quart and a quart is good for 4 square feet. How much does he spend on paint?\n ",
+    "output_correct": "Step 1: Calculate the total area of the flag: \n5 feet x 4 feet x 2 (for both sides) = 40 square feet \n\nStep 2: Calculate the number of quarts needed: \n40 square feet \u00f7 4 square feet/quart = 10 quarts \n\nStep 3: Calculate the total cost of the paint: \n10 quarts x $2/quart = $20 \n\nAnswer: Tommy spends $20 on paint.",
     "output": "1. Calculate the total area of the flag: \n5 feet x 4 feet = 20 square feet \n\n2. Determine how many quarts of paint are needed: \n20 square feet \u00f7 4 square feet/quart = 5 quarts \n\n3. Multiply the number of quarts by the cost per quart: \n5 quarts x $2/quart = $10 \n\nTherefore, Tommy spends $10 on paint.\n",
     "answer_correct": 20.0,
     "answer_given": 10.0
