@@ -205,6 +205,7 @@ def parse_args():
     parser.add_argument('--base_model', required=True)
     parser.add_argument('--lora_weights', required=True)
     parser.add_argument('--load_8bit', action='store_true', default=False)
+    parser.add_argument('--vanilla', action='store_true', default=False)
     parser.add_argument('--max_new_tokens', type=int, required=True)
 
     return parser.parse_args()
@@ -223,7 +224,7 @@ def load_model(args) -> tuple:
     if not base_model:
         raise ValueError(f'can not find base model name by the value: {args.base_model}')
     lora_weights = args.lora_weights
-    if not lora_weights:
+    if (not lora_weights) and (not args.vanilla):
         raise ValueError(f'can not find lora weight, the value is: {lora_weights}')
 
     load_8bit = args.load_8bit
@@ -239,33 +240,36 @@ def load_model(args) -> tuple:
             device_map="auto",
             trust_remote_code=True,
         ) # fix zwq
-        model = PeftModel.from_pretrained(
-            model,
-            lora_weights,
-            torch_dtype=torch.float16,
-            device_map={"":0}
-        )
+        if not args.vanilla:
+            model = PeftModel.from_pretrained(
+                model,
+                lora_weights,
+                torch_dtype=torch.float16,
+                device_map={"":0}
+            )
     elif device == "mps":
         model = AutoModelForCausalLM.from_pretrained(
             base_model,
             device_map={"": device},
             torch_dtype=torch.float16,
         )
-        model = PeftModel.from_pretrained(
-            model,
-            lora_weights,
-            device_map={"": device},
-            torch_dtype=torch.float16,
-        )
+        if not args.vanilla:
+            model = PeftModel.from_pretrained(
+                model,
+                lora_weights,
+                device_map={"": device},
+                torch_dtype=torch.float16,
+            )
     else:
         model = AutoModelForCausalLM.from_pretrained(
             base_model, device_map={"": device}, low_cpu_mem_usage=True
         )
-        model = PeftModel.from_pretrained(
-            model,
-            lora_weights,
-            device_map={"": device},
-        )
+        if not args.vanilla:
+            model = PeftModel.from_pretrained(
+                model,
+                lora_weights,
+                device_map={"": device},
+            )
 
         # unwind broken decapoda-research config
         model.config.pad_token_id = tokenizer.pad_token_id = 0  # unk
@@ -293,10 +297,10 @@ def extract_answer_number(args, sentence: str) -> float:
     dataset = args.dataset.lower()
     if dataset in ["multiarith", "addsub", "singleeq", "gsm8k", "svamp", "gsm50", "math50"]:  # gsm50, math50
         sentence = sentence.replace(',', '')
-        pred = [s for s in re.findall(r'-?\d+\.?\d*', sentence)]
+        pred = [s for s in re.findall(r'[^0-9A-Za-z](-?[0-9,]+\.?[0-9,]*)', sentence)]
         if not pred:
             return float('inf')
-        pred_answer = float(pred[-1])
+        pred_answer = float(pred[-1].replace(',', ''))
     else:
         raise NotImplementedError(' not support dataset: {}'.format(dataset))
     if isinstance(pred_answer, str):
