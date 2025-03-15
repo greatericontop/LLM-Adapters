@@ -110,6 +110,7 @@ def get_eval_prompt(instruction: str) -> str:
 {instruction}
 
 ### Response:
+<think>
 '''
 
     #return llama3_eval_propmt

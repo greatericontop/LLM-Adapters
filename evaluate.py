@@ -36,7 +36,7 @@ def main():
     def evaluate(
             instruction,
             input=None,
-            temperature=0.1,
+            temperature=0.5,
             top_p=0.75,
             top_k=40,
             num_beams=4,
@@ -296,6 +296,7 @@ def extract_answer_number(args, sentence: str) -> float:
     dataset = args.dataset.lower()
     if dataset in ["multiarith", "addsub", "singleeq", "gsm8k", "svamp", "gsm50", "math50"]:  # gsm50, math50
         sentence = sentence.replace(',', '')
+        sentence = sentence.partition('</think>')[0]
         pred = [s for s in re.findall(r'[^0-9A-Za-z](-?[0-9,]+\.?[0-9,]*)', sentence)]
         if not pred:
             return float('inf')
