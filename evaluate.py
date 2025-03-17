@@ -124,13 +124,14 @@ def main():
         new_data['pred'] = predict
         new_data['flag'] = flag
         output_data.append(new_data)
-        print('\n')
-        print('\033[0;35m---------------\033[0;0m')
-        print(f'\033[0;37m{instruction}\033[0;0m\n')
-        print(outputs)
-        print(f'\033[0;36mprediction: {predict}\033[0;0m')
-        print(f'\033[0;36mcorrect: {label}\033[0;0m')
-        print('\033[0;35m---------------\033[0;0m')
+        if not flag:  # For convenience
+            print('\n')
+            print('\033[0;35m---------------\033[0;0m')
+            print(f'\033[0;37m{instruction}\033[0;0m\n')
+            print(outputs)
+            print(f'\033[0;36mprediction: {predict}\033[0;0m')
+            print(f'\033[0;36mcorrect: {label}\033[0;0m')
+            print('\033[0;35m---------------\033[0;0m')
         print(f'\rtest:{idx + 1}/{total} | accuracy {correct}  {correct / (idx + 1)}')
         with open(save_file, 'w+') as f:
             json.dump(output_data, f, indent=4)
