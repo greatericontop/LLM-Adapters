@@ -104,13 +104,14 @@ Therefore, 40% of the number of students who entered the bus at the intermediate
 
 
 def get_eval_prompt(instruction: str) -> str:
-    return f'''Answer the question below. Make sure to explain your reasoning, but be concise in your explanations since there is a word limit. SUPER IMPORTANT: Your response must end with "The answer is X", where X is your answer.
+    return f'''<|begin_of_text|><|start_header_id|>user<|end_header_id|>
+Answer the question below. Make sure to explain your reasoning, but be concise in your explanations since there is a word limit. SUPER IMPORTANT: Your response must end with "The answer is X", where X is your answer.
 
-### Instruction:
 {instruction}
 
-### Response:
+<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 <think>
+
 '''
 
     #return llama3_eval_propmt
