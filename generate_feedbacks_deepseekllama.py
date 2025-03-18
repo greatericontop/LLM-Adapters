@@ -136,6 +136,14 @@ def main():
                   f'{output}\n'
                   f'\033[35m------------------------------------\033[0m\n')
 
+            output_data.append({
+                "instruction": data["instruction"],
+                "output_correct": data["output_correct"],
+                "answer_correct": data["answer_correct"],
+                "output": data["output"],
+                "answer_given": data["answer_given"],
+                "feedback": output
+            })
             with open(save_file, 'w') as f:
                 json.dump(output_data, f, indent=2)
             if i % 100 == 0:
