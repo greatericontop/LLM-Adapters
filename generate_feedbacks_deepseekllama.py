@@ -129,12 +129,18 @@ def main():
                       f'<think>\n')
             output = evaluate(prompt, max_new_tokens=max_new_tokens)
             output = output.partition('<think>\n')[2]
-            output = output.partition('</think>')[0]
+            #output = output.partition('</think>')[0]
             print(f'\033[35m------------------------------------\033[0m\n'
                   f'\033[37m{prompt}\033[0m\n'
                   f'\033[35m-----\033[0m\n'
                   f'{output}\n'
                   f'\033[35m------------------------------------\033[0m\n')
+
+            with open(save_file, 'w') as f:
+                json.dump(output_data, f, indent=2)
+            if i % 100 == 0:
+                with open(f'{save_file}x100', 'w') as f:
+                    json.dump(output_data, f, indent=2)
 
         pbar.update(1)
     pbar.close()
