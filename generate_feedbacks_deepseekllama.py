@@ -97,6 +97,10 @@ def main():
     pbar = tqdm(total=total)
     print('\033[35;1mStarting...\033[0m\n')
     for i, data in enumerate(dataset):
+        print('Note: starting at i=1601 as prev checkpoint had 1601 items (up to i=1600)')
+        if i < 1601:
+            pbar.update(1)
+            continue
 
         if args.dataset_path == 'mathtest.json':
             prompt = (f'<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n'
