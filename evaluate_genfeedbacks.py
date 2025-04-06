@@ -40,9 +40,7 @@ def main():
             top_p=0.75,
             top_k=40,
             num_beams=4,
-            #max_new_tokens=704,
-            #max_new_tokens=175,
-            max_new_tokens=192,
+            max_new_tokens=None,
             **kwargs,
     ):
         prompt = generate_prompt(instruction)
@@ -66,19 +64,15 @@ def main():
             )
         s = generation_output.sequences[0]
         raw_output: str = tokenizer.decode(s)
-        trimmed_output: str = raw_output.split("### Response:")[1].strip()
+        trimmed_output: str = raw_output.split("### Response:")[1].strip()  # TODO
         return trimmed_output
 
 
-    save_file = f'experiment/{args.model_tokenizer}-{args.adapter}-{args.dataset}.json'
+    save_file = f'experiment/feedback-{args.dataset}.json'  # TODO
     create_dir('experiment/')
 
     max_new_tokens = args.max_new_tokens
     print(f'        -> max_new_tokens: {max_new_tokens}')
-    string_to_cut_off_response = args.string_to_cut_off_response
-    print(f'        -> string_to_cut_off_response: {string_to_cut_off_response}')
-    wrong_answers_filename = args.wrong_answers_filename
-    print(f'        -> wrong_answers_filename: {wrong_answers_filename}')
 
     dataset = load_data(args)
     tokenizer, model = load_model(args)
@@ -183,8 +177,6 @@ def parse_args():
     parser.add_argument('--load_8bit', action='store_true', default=False)
 
     parser.add_argument('--max_new_tokens', type=int, required=True)
-    parser.add_argument('--string_to_cut_off_response', type=str, default=None)
-    parser.add_argument('--wrong_answers_filename', type=str, default='experiment/latest-wrong-answers.json')
 
     return parser.parse_args()
 
