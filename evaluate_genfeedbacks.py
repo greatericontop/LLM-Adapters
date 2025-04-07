@@ -63,8 +63,7 @@ def main():
             )
         s = generation_output.sequences[0]
         raw_output: str = tokenizer.decode(s)
-        trimmed_output: str = raw_output.split("### Response:")[1].strip()  # TODO
-        return trimmed_output
+        return raw_output
 
 
     save_file = args.save_file
