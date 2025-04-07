@@ -67,19 +67,16 @@ def main():
         return trimmed_output
 
 
-    save_file = f'experiment/feedback-{args.dataset}.json'  # TODO
+    save_file = args.save_file
+    print(f'        -> save_file: {save_file}')
     create_dir('experiment/')
-
     max_new_tokens = args.max_new_tokens
     print(f'        -> max_new_tokens: {max_new_tokens}')
 
     dataset = load_data(args)
     tokenizer, model = load_model(args)
     total = len(dataset)
-    correct = 0
-    miss = 0.001
     output_data = []
-    wrong_answer_data = []
     pbar = tqdm(total=total)
     for idx, data in enumerate(dataset):
 
@@ -92,7 +89,7 @@ def main():
         print('\033[0;35m---------------\033[0;0m')
         print(f'\rtest:{idx + 1}/{total}')
         with open(save_file, 'w+') as f:
-            json.dump(output_data, f, indent=4)
+            json.dump(output_data, f, indent=2)
 
         pbar.update(1)
     pbar.close()
@@ -140,7 +137,7 @@ def load_data(args) -> list:
     Returns:
 
     """
-    file_path = f'dataset/{args.dataset}/test.json'
+    file_path = f'{args.dataset}'
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"can not find dataset file : {file_path}")
     json_data = json.load(open(file_path, 'r'))
@@ -149,7 +146,7 @@ def load_data(args) -> list:
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', choices=['AddSub', 'MultiArith', 'SingleEq', 'gsm8k', 'AQuA', 'SVAMP', 'apchem', 'gsm50', 'math50', 'math10ktraintest'],
+    parser.add_argument('--dataset', type=str,
                         required=True)
     parser.add_argument('--model_tokenizer', choices=['LLaMA-7B', 'BLOOM-7B', 'GPT-j-6B', 'autotokenizer'], required=True)
     parser.add_argument('--adapter', choices=['LoRA', 'AdapterP', 'AdapterH', 'Parallel', 'Prefix'],
@@ -159,6 +156,7 @@ def parse_args():
     parser.add_argument('--load_8bit', action='store_true', default=False)
 
     parser.add_argument('--max_new_tokens', type=int, required=True)
+    parser.add_argument('--save_file', type=str, required=True)
 
     return parser.parse_args()
 
