@@ -34,8 +34,7 @@ def main():
     args = parse_args()
 
     def evaluate(
-            instruction,
-            input=None,
+            dataset_entry,
             temperature=0.1,
             top_p=0.75,
             top_k=40,
@@ -43,7 +42,7 @@ def main():
             max_new_tokens=None,
             **kwargs,
     ):
-        prompt = generate_prompt(instruction)
+        prompt = generate_prompt(dataset_entry)
         inputs = tokenizer(prompt, return_tensors="pt")
         input_ids = inputs["input_ids"].to(device)
         generation_config = GenerationConfig(
@@ -83,56 +82,18 @@ def main():
     wrong_answer_data = []
     pbar = tqdm(total=total)
     for idx, data in enumerate(dataset):
-        instruction = data.get('instruction')
-        input_ = data.get('input')
 
-        outputs = evaluate(instruction, input_, max_new_tokens=max_new_tokens)
-        label = data.get('answer')
-        flag = False
-        if args.dataset.lower() in ['aqua', 'apchem']:  # apchem
-            predict = extract_answer_letter(args, outputs, string_to_cut_off_response)
-            if label == predict:
-                correct += 1
-                flag = True
-        else:
-            if isinstance(label, str):
-                label = float(label)
-            predict = extract_answer_number(args, outputs, string_to_cut_off_response)
-            if abs(label - predict) <= miss:
-                correct += 1
-                flag = True
-        new_data = copy.deepcopy(data)
-        new_data['output_pred'] = outputs
-        new_data['pred'] = predict
-        new_data['flag'] = flag
-        output_data.append(new_data)
+        outputs = evaluate(data, max_new_tokens=max_new_tokens)
+
+        output_data.append({**data, 'raw_output': outputs})
         print('\n')
         print('\033[0;35m---------------\033[0;0m')
-        print(f'\033[0;37m{instruction}\033[0;0m\n')
-        if string_to_cut_off_response is None:
-            print(outputs)
-            if not flag:
-                wrong_answer_data.append({'instruction': instruction, 'output': outputs, 'answer_correct': label, 'answer_given': predict})
-        else:
-            partitioned = outputs.partition(string_to_cut_off_response)
-            print(f'{partitioned[0]}\033[0;90m{partitioned[1]}{partitioned[2]}\033[0;0m')
-            if not flag:
-                wrong_answer_data.append({'instruction': instruction, 'output': partitioned[0], 'answer_correct': label, 'answer_given': predict})
-        print(f'\033[0;36mprediction: {predict}\033[0;0m')
-        print(f'\033[0;36mcorrect: {label}\033[0;0m')
+        print(f'\033[0;37m{outputs}\033[0;0m\n')
         print('\033[0;35m---------------\033[0;0m')
-        print(f'\rtest:{idx + 1}/{total} | accuracy {correct}  {correct / (idx + 1)}')
+        print(f'\rtest:{idx + 1}/{total}')
         with open(save_file, 'w+') as f:
             json.dump(output_data, f, indent=4)
-        with open(wrong_answers_filename, 'w+') as f:
-            json.dump(wrong_answer_data, f, indent=4)
-        # checkpoints/backups
-        if idx % 1000 == 0:
-            with open(f'{wrong_answers_filename}.checkpoint1000', 'w+') as f:
-                json.dump(wrong_answer_data, f, indent=4)
-        elif idx % 200 == 0:
-            with open(f'{wrong_answers_filename}.checkpoint200', 'w+') as f:
-                json.dump(wrong_answer_data, f, indent=4)
+
         pbar.update(1)
     pbar.close()
     print('\n')
@@ -145,8 +106,29 @@ def create_dir(dir_path):
     return
 
 
-def generate_prompt(instruction):
-    return prompt.get_eval_prompt(instruction)
+def generate_prompt(data_point):
+    return (
+        f'Below is a math problem. A answer the problem incorrectly. Their answer and explanation are below. '
+        f'The correct answer and explanation are also listed below. Please offer feedback to the student '
+        f'explaining why their answer is incorrect.\n'
+        f'\n'
+        f'#### PROBLEM\n'
+        f'{data_point["instruction"]}\n'
+        f'\n'
+        f'#### STUDENT ANSWER\n'
+        f'{data_point["answer_given"]}\n'
+        f'\n'
+        f'#### STUDENT EXPLANATION\n'
+        f'{data_point["output"]}\n'
+        f'\n'
+        f'#### CORRECT ANSWER\n'
+        f'{data_point["answer_correct"]}\n'
+        f'\n'
+        f'#### CORRECT EXPLANATION\n'
+        f'{data_point["output_correct"]}\n'
+        f'\n'
+        f'#### FEEDBACK\n'
+    )
 
 
 def load_data(args) -> list:
