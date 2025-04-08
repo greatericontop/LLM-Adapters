@@ -105,8 +105,9 @@ def create_dir(dir_path):
 def generate_prompt(data_point):
     return (
         f'Below is a math problem. A answer the problem incorrectly. Their answer and explanation are below. '
-        f'The correct answer and explanation are also listed below. Please offer feedback to the student '
-        f'explaining why their answer is incorrect.\n'
+            f'The correct answer and explanation are also listed below. Please offer feedback to the student '
+            f'explaining why their answer is incorrect. '
+            f"Don't just repeat the correct answer; tell the student why they're wrong.\n"
         f'\n'
         f'#### PROBLEM\n'
         f'{data_point["instruction"]}\n'
