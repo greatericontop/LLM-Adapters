@@ -107,7 +107,8 @@ def generate_prompt(data_point):
     return (
         f'Below is a math problem. A student answered the problem incorrectly. Their answer and explanation are below. '
         f'The correct answer and explanation are also listed below. Please offer feedback to the student '
-        f'explaining why their answer is incorrect.\n'
+        f'explaining why their answer is incorrect. '
+        f"Don't just repeat the correct answer; tell the student what they did wrong.\n"
         f'\n'
         f'#### PROBLEM\n'
         f'{data_point["instruction"]}\n'
