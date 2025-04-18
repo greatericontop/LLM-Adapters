@@ -35,7 +35,8 @@ def main():
 
     def evaluate(
             dataset_entry,
-            temperature=0.1,
+            temperature=0.3,
+            #temperature=0.1,
             top_p=0.75,
             top_k=40,
             num_beams=4,
@@ -104,7 +105,7 @@ def create_dir(dir_path):
 
 def generate_prompt(data_point):
     return (
-        f'Below is a math problem. A answer the problem incorrectly. Their answer and explanation are below. '
+        f'Below is a math problem. A student answered the problem incorrectly. Their answer and explanation are below. '
         f'The correct answer and explanation are also listed below. Please offer feedback to the student '
         f'explaining why their answer is incorrect.\n'
         f'\n'
