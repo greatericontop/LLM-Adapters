@@ -178,7 +178,7 @@ def load_model(args) -> tuple:
         raise ValueError(f'can not find base model name by the value: {args.base_model}')
     lora_weights = args.lora_weights
     if not lora_weights:
-        raise ValueError(f'can not find lora weight, the value is: {lora_weights}')
+        print('warning: no lora weights')
 
     load_8bit = args.load_8bit
     if args.model_tokenizer == 'LLaMA-7B':
