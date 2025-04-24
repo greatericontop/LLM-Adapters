@@ -105,6 +105,7 @@ def create_dir(dir_path):
 
 def generate_prompt(data_point):
     return (
+        f'<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n'
         f'Below is a math problem. A student answered the problem incorrectly. Their answer and explanation are below. '
         f'The correct answer and explanation are also listed below. Please offer feedback to the student '
         f'explaining why their answer is incorrect. '
@@ -113,19 +114,19 @@ def generate_prompt(data_point):
         f'#### PROBLEM\n'
         f'{data_point["instruction"]}\n'
         f'\n'
-        f'#### STUDENT ANSWER\n'
-        f'{data_point["answer_given"]}\n'
-        f'\n'
-        f'#### STUDENT EXPLANATION\n'
-        f'{data_point["output"]}\n'
-        f'\n'
         f'#### CORRECT ANSWER\n'
         f'{data_point["answer_correct"]}\n'
         f'\n'
         f'#### CORRECT EXPLANATION\n'
         f'{data_point["output_correct"]}\n'
         f'\n'
-        f'#### FEEDBACK\n'
+        f'#### STUDENT ANSWER\n'
+        f'{data_point["answer_given"]}\n'
+        f'\n'
+        f'#### STUDENT EXPLANATION\n'
+        f'{data_point["output"]}\n'
+        f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n'
+        f'<think>\n'
     )
 
 
