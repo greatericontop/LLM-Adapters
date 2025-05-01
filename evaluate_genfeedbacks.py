@@ -35,7 +35,7 @@ def main():
 
     def evaluate(
             dataset_entry,
-            temperature=0.3,
+            temperature=0.6,
             #temperature=0.1,
             top_p=0.75,
             top_k=40,
