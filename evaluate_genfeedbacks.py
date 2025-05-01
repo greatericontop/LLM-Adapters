@@ -105,6 +105,7 @@ def create_dir(dir_path):
 
 def generate_prompt(data_point):
     return (
+        f'<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n'
         f'Below is a math problem. A student answered the problem incorrectly. Their answer and explanation are below. '
         f'The correct answer and explanation are also listed below. Please offer feedback to the student '
         f'explaining why their answer is incorrect. '
@@ -113,19 +114,19 @@ def generate_prompt(data_point):
         f'#### PROBLEM\n'
         f'{data_point["instruction"]}\n'
         f'\n'
-        f'#### STUDENT ANSWER\n'
-        f'{data_point["answer_given"]}\n'
-        f'\n'
-        f'#### STUDENT EXPLANATION\n'
-        f'{data_point["output"]}\n'
-        f'\n'
         f'#### CORRECT ANSWER\n'
         f'{data_point["answer_correct"]}\n'
         f'\n'
         f'#### CORRECT EXPLANATION\n'
         f'{data_point["output_correct"]}\n'
         f'\n'
-        f'#### FEEDBACK\n'
+        f'#### STUDENT ANSWER\n'
+        f'{data_point["answer_given"]}\n'
+        f'\n'
+        f'#### STUDENT EXPLANATION\n'
+        f'{data_point["output"]}\n'
+        f'<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n'
+        f'<think>\n'
     )
 
 
@@ -153,11 +154,12 @@ def parse_args():
     parser.add_argument('--adapter', choices=['LoRA', 'AdapterP', 'AdapterH', 'Parallel', 'Prefix'],
                         required=True)
     parser.add_argument('--base_model', required=True)
-    parser.add_argument('--lora_weights', required=True)
+    parser.add_argument('--lora_weights', required=False)
     parser.add_argument('--load_8bit', action='store_true', default=False)
 
     parser.add_argument('--max_new_tokens', type=int, required=True)
     parser.add_argument('--save_file', type=str, required=True)
+    parser.add_argument('--no_extra_weights', action='store_true', default=False)
 
     return parser.parse_args()
 
@@ -176,7 +178,7 @@ def load_model(args) -> tuple:
         raise ValueError(f'can not find base model name by the value: {args.base_model}')
     lora_weights = args.lora_weights
     if not lora_weights:
-        raise ValueError(f'can not find lora weight, the value is: {lora_weights}')
+        print('warning: no lora weights')
 
     load_8bit = args.load_8bit
     if args.model_tokenizer == 'LLaMA-7B':
@@ -191,33 +193,36 @@ def load_model(args) -> tuple:
             device_map="auto",
             trust_remote_code=True,
         ) # fix zwq
-        model = PeftModel.from_pretrained(
-            model,
-            lora_weights,
-            torch_dtype=torch.float16,
-            device_map={"":0}
-        )
+        if not args.no_extra_weights:
+            model = PeftModel.from_pretrained(
+                model,
+                lora_weights,
+                torch_dtype=torch.float16,
+                device_map={"":0}
+            )
     elif device == "mps":
         model = AutoModelForCausalLM.from_pretrained(
             base_model,
             device_map={"": device},
             torch_dtype=torch.float16,
         )
-        model = PeftModel.from_pretrained(
-            model,
-            lora_weights,
-            device_map={"": device},
-            torch_dtype=torch.float16,
-        )
+        if not args.no_extra_weights:
+            model = PeftModel.from_pretrained(
+                model,
+                lora_weights,
+                device_map={"": device},
+                torch_dtype=torch.float16,
+            )
     else:
         model = AutoModelForCausalLM.from_pretrained(
             base_model, device_map={"": device}, low_cpu_mem_usage=True
         )
-        model = PeftModel.from_pretrained(
-            model,
-            lora_weights,
-            device_map={"": device},
-        )
+        if not args.no_extra_weights:
+            model = PeftModel.from_pretrained(
+                model,
+                lora_weights,
+                device_map={"": device},
+            )
 
         # unwind broken decapoda-research config
         model.config.pad_token_id = tokenizer.pad_token_id = 0  # unk
